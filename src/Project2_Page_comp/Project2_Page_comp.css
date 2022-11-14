@@ -1,0 +1,288 @@
+.projectCont{padding-top: 60px;}
+  .imgss {
+    width: 100%;
+  
+  }
+  #ProjCarousel
+  {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .leftSide
+  {
+    background-color: rgba(0, 255, 255, 0);
+    display: inline-block;
+    
+    transition: width 0.1s, height 0.1s, flex 0.1s, max-width 0.1s;
+
+    
+
+  }
+  .rightSide
+  {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+    
+  }
+  /* .rightSide:hover
+  {
+    transform: scale(1.5);
+    
+  } */
+  .projToolsSec
+  {
+    border-left: black solid 2px;
+  }
+  .inner-img
+  {
+    cursor: zoom-in;
+    
+
+  }
+  .projDetails
+  {
+    margin-top: 60px;
+    margin-bottom: 60px;
+     
+
+  }
+.arrowCar
+{
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+.Features
+{
+  color: green;
+}
+
+.Tools
+{
+  color: rgb(26, 87, 167);
+}
+.titlee{display: block;}
+.mob-titlee{
+  display: none;
+  margin-bottom: 50px;
+  font-size: 15px;
+  }
+  .mob-titlee h1{
+font-size: 25px;
+  
+    }
+  .dwnldBtn
+  {
+    margin-top: 10px;
+    width: 100%;
+
+  }
+  .dwnldBtn:active
+  {
+    box-shadow: 0px 0px 0px !important;
+    /* color: rgb(255, 0, 0) !important; */
+    
+  }
+  .dwnldBtn:focus
+  {
+    box-shadow: 0px 0px 0px;
+    /* color: rgb(157, 114, 236); */
+  }
+  .watchBtn
+  {
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-shadow: 0px 0px 0px;
+
+  }
+  .watchBtn:active
+  {
+    box-shadow: 0px 0px 0px !important;
+    /* color: rgb(255, 0, 0) !important; */
+    
+  }
+  .watchBtn:focus
+  {
+    box-shadow: 0px 0px 0px;
+    /* color: rgb(157, 114, 236); */
+  }
+
+
+
+  .vidBdy
+  {
+padding: 0px;
+    height: 315px;
+  }
+  .vidBdyCont
+  {
+    max-width: fit-content;
+    /* width: 500px;
+    height: fit-content; */
+  }
+  .Watchmore
+  {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+.showAll{text-align: right;}
+.ListPoints{list-style-type:disc}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .testimonial-group ::-webkit-scrollbar {
+
+height: 5px;
+
+}
+
+/* Track */
+.testimonial-group ::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+.testimonial-group ::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+.testimonial-group ::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+
+
+
+
+  /* The heart of the matter */
+.testimonial-group > .row {
+display: block;
+overflow-x: auto;
+white-space: nowrap;
+}
+.testimonial-group > .row > .sliderEle {
+display: inline-block;
+}
+
+/* Decorations */
+.sliderEle { color: rgb(0, 0, 0); font-size: 48px; padding-bottom: 20px; padding-top: 18px; background-color: rgb(175, 75, 75); }
+.leftArrow
+{
+  flex: 0 0 3%;
+    max-width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightArrow
+{
+  flex: 0 0 3%;
+    max-width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Slider{
+  flex: 0 0 94%;
+    max-width: 94%;
+}
+.Arroww
+{
+  font-size: 37px;
+  cursor: pointer;
+}
+.SliderContainer
+{
+  margin-bottom: 60px;
+}
+
+
+
+
+
+/* #projectPageMain
+{
+  background-image: url('https://previews.123rf.com/images/viktory/viktory1306/viktory130600113/20025251-pixel-seamless-subtle-background-snowflakes-of-pixel-pattern-can-be-used-for-web-project-wallpaper-p.jpg');
+  margin: 0px 0px 0px 0px !important;
+  padding: 60px 100px 0px 100px;
+  width: 100vw;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width: 1150px) 
+            {
+.titlee{display: none;}
+.mob-titlee{display: block;}
+.projToolsSec{border-left: rgb(26, 87, 167) solid 3px; }
+.projFeaturesSec{border-left: green solid 3px; margin-bottom: 10px; }
+.leftSide{
+  order: 2;
+  flex: 0 0 100%;
+    max-width: 100%;} 
+
+
+.rightSide{
+  order: 1;
+  align-items: flex-start;
+  flex: 0 0 100%;
+    max-width: 100%;} 
+
+
+/* ------------------------------------------------------------------ */
+.leftArrow{display: none;}  
+.rightArrow{display: none;} 
+.Slider{  flex: 0 0 100%;
+    max-width: 100%;}   
+.sliderEle
+{
+  flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}        
+
+
+ }
+
+ @media screen and (max-width: 541px) {.vidd{width:523px; }}    
+ @media screen and (max-width: 414px) {
+  .vidd{width:397px; }
+
+}    
+ @media screen and (max-width: 411px) {.vidd{width:393px; }}    
+ @media screen and (max-width: 375px) {.vidd{width:358px; }}    
+ @media screen and (max-width: 360px) {.vidd{width:343px; }}        
+ @media screen and (max-width: 320px) {.vidd{width:303px; }}

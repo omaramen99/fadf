@@ -1,0 +1,114 @@
+.portCont
+{
+
+
+    /* background-image: url("pbg - Copy.jpeg"); */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    height: 100vh;
+
+}
+.portTitle
+{
+    color: white;
+    font-size: 7rem;
+    font-weight: 500;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.portTitlee
+{
+    
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+.portBtn
+{
+    /* color: white !important; */
+    width: 200px;
+    font-weight: 500;
+    border-width: 3px;
+   
+}
+.portBtnCont
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+   
+}
+.portBtnContt
+{
+    display: none;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+.portLeft
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+.portRight
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.portfolioMainRow{
+    height: 100%;
+    padding: 5% 0px 1% 0px;
+}
+@media screen and (max-width: 1000px) 
+{
+    .portTitle{font-size: 6rem ;}
+    .portTitlee{font-size: 3rem ;}
+    .portBtnContt{display: flex;}
+    .portBtnCont{display: none;}
+
+    .portCont
+{
+
+
+    height: fit-content;
+
+}
+.portfolioMainRow{
+    height: 100%;
+    padding: 50px 0px 1% 0px;
+}
+
+}
+@media screen and (max-width: 390px) 
+{
+    .portTitle{font-size: 70px;}
+    .portTitlee{font-size: 2rem ;}
+    .portBtnContt{display: flex;}
+    .portBtnCont{display: none;}
+    .portCont
+{
+
+
+    height: fit-content;
+
+}
+.portfolioMainRow{
+    height: 100%;
+    padding: 50px 0px 1% 0px;
+}
+
+}
+

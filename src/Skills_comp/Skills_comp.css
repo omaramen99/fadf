@@ -1,0 +1,349 @@
+.skillSectionHeader
+            {
+                padding: 0px 145px;
+                text-align: center;
+                margin: 30px;
+            }
+            .headerTitle
+            {
+                font-size: 3rem;
+                font-weight: 500;
+            }
+            .headerDes
+            {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            .skillContainer
+            {
+                /* height: 650px; */
+                height: 85vh;
+                padding: 20px 0px;
+
+            }
+            .skillDetails
+            {
+                background-color: rgba(255, 255, 0, 0);
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                overflow: hidden;
+                justify-content: center;
+                align-items: center;
+                /* align-content: center; */
+
+            }
+            .skillImgMain
+            {
+                width: 300px;
+               height: 400px;
+               position: relative;
+               z-index: 2;
+
+            }
+
+            .skillDetailsMain
+            {
+                background-color: rgb(34, 45, 63);
+                text-align: center;
+                width: 100%;
+                border-radius: 5px;
+                padding: 0px 20px 10px 20px;
+               
+
+   
+            }
+            .skillTitle
+            {
+                font-size: 32px;
+                color: white;
+                font-weight: 500;
+                text-shadow: 0px 0px 6px rgb(255, 255, 255);
+                display: inline-block;
+                
+
+            }
+            .skillDes
+            {
+                font-size: 17px;
+                color: white;
+                font-weight: 400;
+            }
+            .skillBtns
+            {
+                
+                background-color: rgba(0, 0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                align-items: center;
+                align-content: center;
+                
+                padding: 0px 0px;
+        
+        
+            }
+
+            .btnsContainer
+            {
+                
+               
+                background: rgba(255, 0, 0, 0);
+                /* height: 100%; */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+
+                
+            }
+            .skillBtn
+            {
+                width: 80px;
+                height: 90px;
+                border: 2px solid rgb(121, 121, 121);
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                background-color: rgb(34, 45, 63);
+                transform: skew(25rad);
+                 transition: transform 0.3s; 
+            }
+            .BtnImg
+            {transform: skew(-25rad);
+             
+                
+            }
+            .skillBtn:hover
+            {
+               
+                
+                transform: scale(1.1, 1.1) skew(25rad);
+                background-color: rgb(4, 195, 77);
+                cursor: pointer;
+            }
+            .skillBtnCont
+            {
+                text-align: center;
+                display: inline-block;
+                margin: 1px 8px;
+            }
+            .skillBtnCont:hover .skillBtn
+            {
+                border: 2px solid rgb(255, 255, 255);
+                transform: scale(1.2, 1.2) skew(25rad);
+                background-color: rgb(0, 103, 121);
+                cursor: pointer;
+                position: relative;
+                z-index: 5;
+            }
+            .skillBtnContSelected
+            {
+                text-align: center;
+                display: inline-block;
+                margin: 1px 8px;
+
+            }
+            .skillBtnContSelected .skillBtn
+            {
+                width: 80px;
+                height: 90px;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                transform: scale(1.2, 1.2) skew(25rad);
+                background-color: rgb(0, 212, 249);
+                cursor: pointer;
+                position: relative;
+                z-index: 5;
+
+            }
+            .btnTitle
+            {
+                display: inline-block;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 500;
+                background-color: white;
+                border-radius: 5px;
+                width: fit-content;
+                padding-right: 6px;
+            }
+            .skillBtnContSelected .btnTitle
+            {
+                color: rgb(0, 212, 249) !important;
+                position: relative;
+                z-index: 8;
+                padding-right: 0px;
+            }
+
+            .skillBtnCont:hover .btnTitle
+            {
+                color: rgb(0, 103, 121);
+                position: relative;
+                z-index: 8;
+                padding-right: 0px;
+            }
+
+            .detailsBtn
+            {
+                transform: skew(25rad);
+                border-radius: 0px;
+                font-size: 19px;
+                font-weight: 500;
+            }
+            .skillTitleDes
+            {
+                background-color: rgba(0, 128, 128, 0); height: 80px; display: flex; justify-content: center; align-items: center;
+
+            }
+            .sepSkill
+            {
+                display: inline-block;
+                width: 100%;
+                border: 1px solid white;
+            }
+            @media screen and (max-width: 1080px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px 200px;
+                    max-width: 100% !important;
+                    flex: 0 0 100%;
+                }
+                .skillTitleDes
+                {
+                    height: fit-content;
+                }
+                .skillDetails{display: none;}
+                .skillBtn
+                {
+                    width: 60px;
+                    height: 70px;
+                }
+                .skillBtnContSelected .skillBtn {
+                    width: 60px;
+                    height: 70px;
+                }
+                .btnTitle
+                {
+
+                    font-size: 0.8rem;
+
+    
+                }
+                
+
+            }
+            @media screen and (max-width: 800px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px 85px;
+                    max-width: 100% !important;
+                    flex: 0 0 100%;
+                }
+                .skillTitleDes
+                {
+                    height: fit-content;
+                }
+                .skillDetails{display: none;}
+
+                .skillBtn
+                {
+                    width: 60px;
+                    height: 70px;
+                }
+                .skillBtnContSelected .skillBtn {
+                    width: 60px;
+                    height: 70px;
+                }
+                .btnTitle
+                {
+
+                    font-size: 0.8rem;
+
+    
+                }
+                #HomeSkills{
+                    padding-top: 70px;                    
+                }
+            }
+
+
+            @media screen and (max-width: 600px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px 50px;
+                }
+                .skillDetails{display: none;}
+
+                .skillBtn
+                {
+                    width: 60px;
+                    height: 70px;
+                }
+                .skillBtnContSelected .skillBtn {
+                    width: 60px;
+                    height: 70px;
+                }
+                .btnTitle
+                {
+
+                    font-size: 0.8rem;
+
+    
+                }
+                #HomeSkills{
+                    padding-top: 70px;                    
+                }
+            }
+            @media screen and (max-width: 400px) 
+            {
+                .skillSectionHeader
+                {
+                    padding: 0px;
+
+                }
+                .skillBtns{
+                    padding: 0px;
+                }
+                .skillDetails{display: none;}
+
+                .skillBtn
+                {
+                    width: 60px;
+                    height: 70px;
+                }
+                .skillBtnContSelected .skillBtn {
+                    width: 60px;
+                    height: 70px;
+                }
+                .btnTitle
+                {
+
+                    font-size: 0.8rem;
+
+    
+                }
+                #HomeSkills{
+                    padding-top: 70px;                    
+                }
+            }

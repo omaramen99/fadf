@@ -1,0 +1,20 @@
+.vidFiller
+{
+
+  /* margin-top: 244px; */
+  margin-top: calc(100vh - 340px);
+}
+.headerGif
+{
+  height: 100%;
+}
+.btn-outline-light-custom
+{
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+  background-color: rgba(0, 0, 0, 0.433);
+}
+
+.btn-outline-light-custom:hover
+{
+  /* text-shadow: -1px -1px 0 rgba(0, 0, 0, 0), 1px -1px 0 rgba(0, 0, 0, 0), -1px 1px 0 rgba(0, 0, 0, 0), 1px 1px 0 rgba(0, 0, 0, 0); */
+}

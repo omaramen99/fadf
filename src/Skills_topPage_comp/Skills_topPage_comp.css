@@ -1,0 +1,76 @@
+.skillsTitle
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+}
+.skillImgMainn
+{
+    width: 400px;
+   height: 500px;
+   position: relative;
+   z-index: 2;
+
+}
+.skillImgg
+{
+    display: flex;
+    justify-content: center;
+}
+.skillChartt
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.chartCont
+{
+
+}
+.SkillDetails
+{
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    transform: skew(25rad);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.Detailss
+{
+    display: inline-block;
+    transform: skew(-25rad);
+}
+
+@media screen and (max-width: 600px) 
+{
+    .skillImgMainn
+    {
+        height: auto;
+    }
+
+    .SkillDetails
+{
+
+    transform: skew(0rad);
+
+}
+
+.Detailss
+{
+
+    transform: skew(0rad);
+}
+#myChart
+{
+    width: 360px !important;
+    height: 360px !important;
+}
+    
+
+}

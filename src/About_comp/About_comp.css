@@ -1,0 +1,377 @@
+/* #aboutSection
+{
+    margin-top: 250px;
+} */
+.unity-canvas
+{
+    width : 500px;
+    height : 400px;
+    cursor: grab !important;
+}
+.unity-canvas:active
+{
+    cursor: grabbing !important;
+}
+.aboutMe
+{
+    display: inline-block;
+    text-align: end;
+    
+}
+.about
+{
+    font-size: 7rem;
+    font-weight: 500;
+    
+}
+.mee
+{
+    position: relative;
+    top: -70px;
+}
+.me
+{
+    font-size: 6rem;
+    font-weight: 500;
+    position: relative;
+    /* top: -70px; */
+}
+.aboutDetailss
+{
+    position: relative;
+    top: -45px;
+}
+.aboutDetails
+{
+    position: relative;
+    /* top: -45px; */
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.seeMoreBtnCont
+{
+    display: flex;
+    justify-content: center;
+
+}
+.seeMoreBtn
+{
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+}
+.viewerCont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnGhost{display: none;}
+
+
+.Ccont
+{
+    position: relative;
+
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    height: 450px;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+
+}
+.iimg1
+{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    /* top: 5%;
+    left: 5%; */
+    z-index: -1;
+}
+.iimg3
+{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+}
+.iimg2
+{
+    position: absolute;
+    z-index: -2;
+    /* top: -5%;
+    left: -5%; */
+}
+
+
+
+
+
+@media screen and (max-width: 1050px) 
+{
+    .unity-canvas
+    {
+        width : 350px;
+        height: 280px;
+        
+      
+    }
+    .aboutDetails
+    {
+        display: inline-block;
+        text-align: center;
+
+    }
+    .aboutLeftSide
+    {
+        display: flex;
+        
+        justify-content: center;
+    }
+
+    /* .btnGhost{display: block;}
+    .seeMoreBtnContt{display: none;} */
+
+    .viewerCont
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.aboutCont
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+    .btnGhost{display: block;
+        flex: 0 0 100%;
+    max-width: 100%;
+    }
+    .seeMoreBtnContt{display: none;}
+
+    .Ccont
+{
+    position: relative;
+
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+
+}
+.iimg1
+{
+    width: 370px;
+    height: 370px;
+    position: relative;
+    /* top: 5%;
+    left: 5%; */
+    z-index: -1;
+}
+.iimg3
+{
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+}
+.iimg2
+{
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    z-index: -2;
+    /* top: -5%;
+    left: -5%; */
+}
+
+    
+
+}
+@media screen and (max-width: 750px) 
+{
+    .unity-canvas
+    {
+        width : 350px;
+        height: 280px;
+        
+      
+    }
+    .aboutDetails
+    {
+        display: inline-block;
+        text-align: center;
+
+    }
+    .aboutLeftSide
+    {
+        display: flex;
+        
+        justify-content: center;
+    }
+
+    .btnGhost{display: block;}
+    .seeMoreBtnContt{display: none;}
+
+    .Ccont
+{
+    position: relative;
+
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+
+}
+.iimg1
+{
+    width: 370px;
+    height: 370px;
+    position: relative;
+    /* top: 5%;
+    left: 5%; */
+    z-index: -1;
+}
+.iimg3
+{
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+}
+.iimg2
+{
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    z-index: -2;
+    /* top: -5%;
+    left: -5%; */
+}
+    
+
+}
+@media screen and (max-width: 400px) 
+{
+    .unity-canvas
+    {
+        width : 350px;
+        height: 280px;
+        
+      
+    }
+    .aboutDetails
+    {
+        display: inline-block;
+        text-align: center;
+
+    }
+    .aboutLeftSide
+    {
+        display: flex;
+        
+        justify-content: center;
+    }
+
+    .btnGhost{display: block;}
+    .seeMoreBtnContt{display: none;}
+
+    .Ccont
+{
+    position: relative;
+
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    height: 350px;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+
+}
+.iimg1
+{
+    width: 320px;
+    height: 320px;
+    position: relative;
+    /* top: 5%;
+    left: 5%; */
+    z-index: -1;
+}
+.iimg3
+{
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+}
+.iimg2
+{
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    z-index: -2;
+    /* top: -5%;
+    left: -5%; */
+}
+    
+
+}
+@media screen and (max-width: 350px) 
+{
+    
+    .Ccont
+{
+    position: relative;
+
+    background-color: rgba(0, 0, 255, 0);
+    display: flex;
+    height: 310px;
+    width: 310px;
+    justify-content: center;
+    align-items: center;
+
+}
+.iimg1
+{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    /* top: 5%;
+    left: 5%; */
+    z-index: -1;
+}
+.iimg3
+{
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+}
+.iimg2
+{
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    z-index: -2;
+    /* top: -5%;
+    left: -5%; */
+}
+    
+
+}

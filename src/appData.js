@@ -3,6 +3,8 @@ import cot1 from './media/cot1.jpg';
 import cot2 from './media/cot2.jpg';
 import cotCover from './media/cotCover.jpg';
 
+import cot2Cover from './media/cot2Cover.jpg';
+
 import fab1 from './media/fab1.jpg';
 import fab2 from './media/fab2.jpg';
 import fabCover from './media/fabCover.jpg';
@@ -23,8 +25,23 @@ import checkerCover from './media/checkerCover.jpg';
 
 export const Data = 
 {
-    TopProjects:["e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a","1ed6d221-1ce6-46c1-b43a-5f9363fca2ac"],
+    TopProjects:["e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a","2ed6d221-1ce6-46c1-b43a-5f9363fca2ad"],
     Projects:[
+       
+        {
+            id:"2ed6d221-1ce6-46c1-b43a-5f9363fca2ad",
+            Name:"Conduits over tray V2",
+            MinDiscription:"Revit add-in, using pre designed patterns to creates conduits and place them over cable trays.",
+            Discription:"This is the new version of the addin [C.O.T 1], this Revit add-in is using pre designed conduits patterns to create electrical conduits then automatically place them over selected cable trays and set the spacing and the bend raduis automatically.",
+            Images:[cot2Cover,cot1,cot2],
+            Tools:["C#","Revit API","WPF"],
+            Features:["Using pre designed conduits patterns.","Conduits bottom offset.","Create required fittings.","Justify fitting bend radius."],
+            YoutubeVidId:"I3mnYY4HzVw",
+            DownloadLink:"",
+            SimilarProjectsIds:["1ed6d221-1ce6-46c1-b43a-5f9363fca2ac","576bc703-1ce6-46c1-b43a-5f9363fca2ac","e90dd55c-321c-48ba-937f-66b8993dff8f"],
+            IsActive:true
+
+        },
         {
             id:"e90dd55c-321c-48ba-937f-66b8993dff8f",
             Name:"Model Health Checker",
@@ -49,7 +66,7 @@ export const Data =
             Features:["Conduits bottom offset.","Create required fittings.","Justify fitting bend radius.","spacing due to standards."],
             YoutubeVidId:"V-Jsfwo-vOU",
             DownloadLink:"",
-            SimilarProjectsIds:["576bc703-1ce6-46c1-b43a-5f9363fca2ac","e90dd55c-321c-48ba-937f-66b8993dff8f"],
+            SimilarProjectsIds:["2ed6d221-1ce6-46c1-b43a-5f9363fca2ad","576bc703-1ce6-46c1-b43a-5f9363fca2ac","e90dd55c-321c-48ba-937f-66b8993dff8f"],
             IsActive:true
 
         },
@@ -63,7 +80,7 @@ export const Data =
             Features:["Supports all MEP curve types.","Flexible indexing and justification.","'IsFabricated' parameter as Mark.","Easy to isolate fabricated elements."],
             YoutubeVidId:"enPGEV6a7Yg",
             DownloadLink:"",
-            SimilarProjectsIds:["1ed6d221-1ce6-46c1-b43a-5f9363fca2ac","e90dd55c-321c-48ba-937f-66b8993dff8f"],
+            SimilarProjectsIds:["1ed6d221-1ce6-46c1-b43a-5f9363fca2ac","2ed6d221-1ce6-46c1-b43a-5f9363fca2ad","e90dd55c-321c-48ba-937f-66b8993dff8f"],
             IsActive:true
 
         },

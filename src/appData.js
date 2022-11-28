@@ -52,7 +52,7 @@ export const Data =
             Features:["Model health charts.","Interactive 3D rotation.","Contains the check list document.","Easy to pick Revit element ids.","Revit warnings listing.","Export offline HTML report."],
             YoutubeVidId:"xccdcfYpbkQ",
             DownloadLink:"https://www.mediafire.com/file/xlefczc4a7ensak/ARCH-_MODEL_o.amen.html/file",
-            SimilarProjectsIds:["1ed6d221-1ce6-46c1-b43a-5f9363fca2ac","576bc703-1ce6-46c1-b43a-5f9363fca2ac"],
+            SimilarProjectsIds:["1ed6d221-1ce6-46c1-b43a-5f9363fca2ac","2ed6d221-1ce6-46c1-b43a-5f9363fca2ad","576bc703-1ce6-46c1-b43a-5f9363fca2ac"],
             IsActive:true
 
         },

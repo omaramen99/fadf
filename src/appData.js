@@ -22,12 +22,30 @@ import checker2 from './media/checker2.jpg';
 import checker3 from './media/checker3.jpg';
 import checkerCover from './media/checkerCover.jpg';
 
+import DTproto1 from './media/DTproto1.jpg';
+import DTproto2 from './media/DTproto2.jpg';
+import DTproto3 from './media/DTproto3.jpg';
+import DTprotoCover from './media/DTprotoCover.jpg';
+
 
 export const Data = 
 {
-    TopProjects:["e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a","2ed6d221-1ce6-46c1-b43a-5f9363fca2ad"],
+    TopProjects:["bc9184b1-8d96-462f-87d4-f14d708ce5b5","e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a"],
     Projects:[
-       
+        {
+            id:"bc9184b1-8d96-462f-87d4-f14d708ce5b5",
+            Name:"Digital Twin Prototype",
+            MinDiscription:"Project to apply the digital twin and IOT on a real structure.",
+            Discription:"This project is a compination of Internet Of Things [IOT], Building Information Modeling [BIM] and Augmented Reality [AR] to apply the concept of the live digital twin on a real structure prototype.",
+            Images:[DTprotoCover,DTproto1,DTproto2,DTproto3],
+            Tools:["C++","C#","NodeJS","Unity","Arduino","IOT","AR"],
+            Features:["IOT wifi connection","Fast 2-way communication.","Fast 3d Viewer.","Power of augmented reality.","Accurate 3D model."],
+            YoutubeVidId:"P1EUPtbP6hg",
+            DownloadLink:"",
+            SimilarProjectsIds:["df2c63e6-f5eb-4239-9f17-90762329eb1a","e90dd55c-321c-48ba-937f-66b8993dff8f","2ed6d221-1ce6-46c1-b43a-5f9363fca2ad","250e9f2d-3aeb-4149-9b07-80ceb8c4e7ab"],
+            IsActive:true
+
+        },
         {
             id:"2ed6d221-1ce6-46c1-b43a-5f9363fca2ad",
             Name:"Conduits over tray V2",

@@ -87,7 +87,7 @@ class About_Page_comp extends React.Component {
 
         var config = {
             method: 'post',
-            url: `https://my-portfolio-backend-11-12-22.herokuapp.com/api/sendmail?name=${name.value}&mail=${email.value}&subject=${subject.value}&message=${message.value}`,
+            url: `https://myportfolio-be-13-11-2022.onrender.com/api/sendmail?name=${name.value}&mail=${email.value}&subject=${subject.value}&message=${message.value}`,
             headers: { }
           };
           

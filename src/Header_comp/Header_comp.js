@@ -269,7 +269,7 @@ var axios = require('axios');
 
        var config = {
         method: 'post',
-        url: `https://my-portfolio-backend-11-12-22.herokuapp.com/api/sendmail?name=${name.value}&mail=${email.value}&subject=${subject.value}&message=${message.value}`,
+        url: `https://myportfolio-be-13-11-2022.onrender.com/api/sendmail?name=${name.value}&mail=${email.value}&subject=${subject.value}&message=${message.value}`,
         headers: { }
       };
       
@@ -324,7 +324,7 @@ var axios = require('axios');
       ////////////////Pinging//////////////
       var config = {
         method: 'get',
-        url: 'https://my-portfolio-backend-11-12-22.herokuapp.com/api/ping',
+        url: 'https://myportfolio-be-13-11-2022.onrender.com/api/ping',
         headers: { }
       };
 
@@ -335,7 +335,7 @@ var axios = require('axios');
           _RemoveLoadingScreen();
           var configg = {
             method: 'post',
-            url: 'https://my-portfolio-backend-11-12-22.herokuapp.com/api/traffic/record',
+            url: 'https://myportfolio-be-13-11-2022.onrender.com/api/traffic/record',
             headers: { }
           };
           axios(configg)

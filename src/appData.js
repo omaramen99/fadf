@@ -28,10 +28,28 @@ import DTproto3 from './media/DTproto3.jpg';
 import DTprotoCover from './media/DTprotoCover.jpg';
 
 
+import revitPiano1 from './media/revitPiano1.jpg';
+import revitPiano2 from './media/revitPiano2.jpg';
+import revitPianoCover from './media/revitPianoCover.jpg';
+
 export const Data = 
 {
-    TopProjects:["bc9184b1-8d96-462f-87d4-f14d708ce5b5","e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a"],
+    TopProjects:["491cbe47-f2cc-42f2-9189-9f1704524e3b","e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a"],
     Projects:[
+        {
+            id:"491cbe47-f2cc-42f2-9189-9f1704524e3b",
+            Name:"Revit Piano add-in",
+            MinDiscription:"Funny Revit add-in the allow you play music on Revit",
+            Discription:"Just having fun with Revit API, this add-in opens a piano and allow the user to play music on the piano through the keyboared keys 😂!",
+            Images:[revitPianoCover,revitPiano1,revitPiano2],
+            Tools:["C#","RevitAPI","Audio system"],
+            Features:["Dynamic Revit view","Playing music while working 😅","Having fun 😁"],
+            YoutubeVidId:"61K7LJxi_M0",
+            DownloadLink:"",
+            SimilarProjectsIds:["bc9184b1-8d96-462f-87d4-f14d708ce5b5","e90dd55c-321c-48ba-937f-66b8993dff8f","df2c63e6-f5eb-4239-9f17-90762329eb1a","250e9f2d-3aeb-4149-9b07-80ceb8c4e7ab"],
+            IsActive:true
+
+        },
         {
             id:"bc9184b1-8d96-462f-87d4-f14d708ce5b5",
             Name:"Digital Twin Prototype",

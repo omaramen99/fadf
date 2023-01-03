@@ -146,7 +146,7 @@ class About_Page_comp extends React.Component {
 
 <div class="large-btn">
     <div class="content-inner">
-        <a class="btn downloadResume" href="https://drive.google.com/u/1/uc?id=1JpmS9LBCMn0K6_rRYkeGX4vYg2PQgcVz&export=download"><i class="fa fa-download"></i>Resume</a>
+        <a class="btn downloadResume" href="https://drive.google.com/u/1/uc?id=1ivrvsRmuL_9n2fOvnzjtQrEBHgYoBEtw&export=download"><i class="fa fa-download"></i>Resume</a>
     </div>
 </div>
 
@@ -265,7 +265,7 @@ class About_Page_comp extends React.Component {
             <div class="col-md-6">
                 <div class="exp-col">
                     <span>01-Dec-2022 <i>to</i> Present</span>
-                    <h3>Galluim</h3>
+                    <h3>Gallium</h3>
                     <h4>Cairo, Egypt</h4>
                     <h5>BIM Specialist | BIM Developer</h5>
                     <p>Revit API · Forge APIs · AR VR MR · C# · Python · JavaScript · HTML5 · CSS</p>

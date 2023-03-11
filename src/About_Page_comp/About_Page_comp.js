@@ -264,11 +264,20 @@ class About_Page_comp extends React.Component {
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="exp-col">
-                    <span>01-Dec-2022 <i>to</i> Present</span>
+                    <span>01-Mar-2023 <i>to</i> Present</span>
+                    <h3>Allied BIM, LLC.</h3>
+                    <h4>Montana 59718, USA - Remotely Fulltime Upwork Freelacer</h4>
+                    <h5>Revit Developer</h5>
+                    <p>Revit API · C# · WPF · MVVM · .NET</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="exp-col">
+                    <span>01-Dec-2022 <i>to</i> 28-Feb-2023</span>
                     <h3>Gallium</h3>
                     <h4>Cairo, Egypt</h4>
                     <h5>BIM Specialist | BIM Developer</h5>
-                    <p>Revit API · Forge APIs · AR VR MR · C# · Python · JavaScript · HTML5 · CSS</p>
+                    <p>Revit API · Forge APIs · AR VR MR · Unity · C# · Python · ReactJS · NodeJS · ThreeJS · JavaScript · HTML5 · CSS</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -278,15 +287,6 @@ class About_Page_comp extends React.Component {
                     <h4>Cairo, Egypt</h4>
                     <h5>BIM R&D Specialist</h5>
                     <p>Revit API · Forge APIs · AR VR MR · C# · Python · JavaScript · HTML5 · CSS</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="exp-col">
-                    <span>01-Nov-2020 <i>to</i> 01-Mar-2021</span>
-                    <h3>ITI</h3>
-                    <h4>Smart Village, Cairo, Egypt</h4>
-                    <h5>Web Developer</h5>
-                    <p>TypeScript · AngularJS · React.js · Node.js · Express.js · Three.js · MongoDB · JavaScript · HTML5 · CSS</p>
                 </div>
             </div>
             <div class="col-md-6">

@@ -32,10 +32,29 @@ import revitPiano1 from './media/revitPiano1.jpg';
 import revitPiano2 from './media/revitPiano2.jpg';
 import revitPianoCover from './media/revitPianoCover.jpg';
 
+import fmWebApp1 from './media/fmWebApp1.jpg';
+import fmWebApp2 from './media/fmWebApp2.jpg';
+import fmWebApp3 from './media/fmWebApp3.jpg';
+import fmWebAppCover from './media/fmWebAppCover.jpg';
+
 export const Data = 
 {
-    TopProjects:["491cbe47-f2cc-42f2-9189-9f1704524e3b","e90dd55c-321c-48ba-937f-66b8993dff8f", "df2c63e6-f5eb-4239-9f17-90762329eb1a"],
+    TopProjects:["491cbe47-f2cc-42f2-9189-9f1704524e3o","491cbe47-f2cc-42f2-9189-9f1704524e3b","e90dd55c-321c-48ba-937f-66b8993dff8f"],
     Projects:[
+        {
+            id:"491cbe47-f2cc-42f2-9189-9f1704524e3o",
+            Name:"Facility Management web application",
+            MinDiscription:"web application that combine BIM documents management with Facility management",
+            Discription:"web application that combine BIM documents management with Facility management, with a Revit file exporter addin. It allows the user to manage and navigate his BIM full models with all information, with the ability to assign maintainance workorders and automatic e-mails notifications with some animation effects.",
+            Images:[fmWebAppCover,fmWebApp1,fmWebApp2,fmWebApp3],
+            Tools:["JavaScript", "ReactJS", "NodeJS" , "Unity", "ThreeJS" , "C#","RevitAPI"],
+            Features:["BIM Documents Management.","Facilities Management.","Workorders and alerts.","E-mails notifications.","Issue messaging system.","Export all system issues."],
+            YoutubeVidId:"Z2j86JAVgtU",
+            DownloadLink:"https://gallium-fm.vercel.app/",
+            SimilarProjectsIds:["e90dd55c-321c-48ba-937f-66b8993dff8f","bc9184b1-8d96-462f-87d4-f14d708ce5b5","491cbe47-f2cc-42f2-9189-9f1704524e3b","250e9f2d-3aeb-4149-9b07-80ceb8c4e7ab"],
+            IsActive:true
+
+        },
         {
             id:"491cbe47-f2cc-42f2-9189-9f1704524e3b",
             Name:"Revit Piano add-in",

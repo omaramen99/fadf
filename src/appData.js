@@ -43,7 +43,7 @@ export const Data =
     Projects:[
         {
             id:"491cbe47-f2cc-42f2-9189-9f1704524e3o",
-            Name:"Facility Management web application",
+            Name:"FM Web Application",
             MinDiscription:"web application that combine BIM documents management with Facility management",
             Discription:"web application that combine BIM documents management with Facility management, with a Revit file exporter addin. It allows the user to manage and navigate his BIM full models with all information, with the ability to assign maintainance workorders and automatic e-mails notifications with some animation effects.",
             Images:[fmWebAppCover,fmWebApp1,fmWebApp2,fmWebApp3],

@@ -25,11 +25,9 @@ Create React App project (`react-scripts` 4, React 17, plain JS). There is no ba
 
 `src/App.test.js` is the untouched CRA placeholder. It looks for "learn react", so it fails. It is not a real test suite.
 
-**Known issue:** CRA 4 on Node 17+ fails with `ERR_OSSL_EVP_UNSUPPORTED`. There are two fixes:
-- Set `NODE_OPTIONS=--openssl-legacy-provider` in the npm scripts, using `cross-env` so it works on Windows.
-- Run under Node 16.
-
-Pick the smallest fix and tell me which one you used.
+**Newer Node versions (Vercel uses Node 24):** CRA 4 needs two workarounds in `package.json`. Keep both.
+- `start` and `build` run `react-scripts --openssl-legacy-provider ...`. Otherwise webpack 4 fails with `ERR_OSSL_EVP_UNSUPPORTED`. react-scripts passes the flag to Node itself, so this works on Windows without `cross-env`.
+- `overrides` pins `postcss-safe-parser`'s nested `postcss` to `^8.4.31`. The 8.2.6 in the old lockfile fails with `ERR_PACKAGE_PATH_NOT_EXPORTED`.
 
 ## Architecture
 

@@ -146,7 +146,7 @@ class About_Page_comp extends React.Component {
 
 <div class="large-btn">
     <div class="content-inner">
-        <a class="btn downloadResume" href="https://drive.google.com/u/1/uc?id=1JpmS9LBCMn0K6_rRYkeGX4vYg2PQgcVz&export=download"><i class="fa fa-download"></i>Resume</a>
+        <a class="btn downloadResume" href="https://drive.google.com/u/1/uc?id=1yXUWIuvX49BdU52Fcg1l5QhoS0o0s0Mi&export=download"><i class="fa fa-download"></i>Résumé</a>
     </div>
 </div>
 

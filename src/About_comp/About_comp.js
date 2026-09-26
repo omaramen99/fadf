@@ -95,7 +95,7 @@ import IMG3 from '../media/33.png';
                     </div>
                     <div className={'aboutDetailss'}>
                     <span class="aboutDetails">
-                    A Developer with a mechanical Engineering-based background, interested in developing and implementing AEC software, specialized in BIM Automation and BIM application development using desktop development and full-stack web development technologies for enhancing workflow, reducing time and effort...
+                    An AEC software developer with 5+ years of experience building BIM software, specializing in MEP and fabrication tools for Revit. A mechanical engineer with HVAC design training, bringing hands-on MEP knowledge to C#/.NET, WPF/MVVM, Revit API and Autodesk Platform Services development...
                     </span>
 
                     </div>

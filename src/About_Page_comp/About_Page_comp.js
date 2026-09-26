@@ -139,7 +139,7 @@ class About_Page_comp extends React.Component {
         <p></p>
         <h1 id='footerNameAboutMe'>Omar Amen</h1>
         <h2 id='footerTitlesAboutMe'></h2>
-        <div class="typed-text">BIM Software Dev, Web Developer, Revit API Dev, Autodesk Forge Dev, Extended Realities Dev</div>
+        <div class="typed-text">AEC Software Developer, MEP & Fabrication Tools for Revit, Revit API Developer, APS / Forge Developer</div>
     </div>
     
 </div>
@@ -161,20 +161,18 @@ class About_Page_comp extends React.Component {
             </div>
             <div class="col-md-6 col-lg-7">
                 <p>
-                    I'm a Developer with a mechanical Engineering-based background, 
-                    interested in developing and implementing AEC software, 
-                    specialized in BIM Automation and BIM application development using desktop development and 
-                    full-stack web development technologies for enhancing workflow, reducing time and effort.<br/>
-                    Worked and interested in: <br/>
-                    ● BIM Automation<br/>
-                    ● Revit API<br/>
-                    ● Navisworks API<br/>
-                    ● AutoCAD API<br/>
-                    ● Full stack web development [MEARN]<br/>
-                    ● Autodesk Forge APIs<br/>
-                    ● Digital Twin platforms development<br/>
-                    ● Internet of things [IOT]<br/>
-                    ● Extended Realities [VR, AR, MR]<br/>
+                    I'm an AEC software developer with 5+ years of experience building BIM software,
+                    specializing in MEP and fabrication tools for Revit.
+                    A mechanical engineer with HVAC design training, I bring hands-on MEP knowledge to
+                    C#/.NET, WPF/MVVM, Revit API and Autodesk Platform Services development,
+                    and I work remotely with teams in the US and Europe.<br/>
+                    Core skills: <br/>
+                    ● MEP & Fabrication: conduit, custom multi-tier strut hanger and duct bank tools<br/>
+                    ● BIM & Autodesk: Revit API, Dynamo, APS / Forge (Viewer, Model Derivative, Design Automation)<br/>
+                    ● Desktop & .NET: .NET Framework 4.8, .NET 8+, WPF, MVVM, Excel automation (EPPlus)<br/>
+                    ● Web & 3D: React, Node.js, Express, MongoDB, Three.js, Unity (AR/VR), glTF/GLB<br/>
+                    ● Languages: C#, JavaScript (ES6+), Python, HTML5, CSS3<br/>
+                    ● Tools & DevOps: Git, Azure DevOps CI/CD, WiX, Inno Setup, NUnit, xUnit<br/>
                 </p>
                 
             </div>
@@ -183,13 +181,13 @@ class About_Page_comp extends React.Component {
             <div class="col-md-6">
                 <div class="skills">
                     <div class="skill-name">
-                        <p>BIM .net development</p><p>90%</p>
+                        <p>C# / .NET</p><p>95%</p>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="skill-name">
-                        <p>Front End Web Dev</p><p>85%</p>
+                        <p>WPF / MVVM</p><p>85%</p>
                     </div>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -199,16 +197,16 @@ class About_Page_comp extends React.Component {
             <div class="col-md-6">
                 <div class="skills">
                     <div class="skill-name">
-                        <p>BIM web development</p><p>85%</p>
+                        <p>Revit API</p><p>95%</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="skill-name">
+                        <p>APS / Forge</p><p>85%</p>
                     </div>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="skill-name">
-                        <p>Back End Web Dev</p><p>80%</p>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -220,35 +218,35 @@ class About_Page_comp extends React.Component {
 <div class="education" id="education">
     <div class="content-inner">
         <div class="content-header">
-            <h2>Education</h2>
+            <h2>Education & Training</h2>
         </div>
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="edu-col">
-                    <span>01-Nov-2020 <i>to</i> 1-Mar-2021</span>
-                    <h3>MEARN Full stack web development Diploma</h3>
-                    <p>ITI - Information Technology Institute</p>
+                    <span>Nov 2020 <i>to</i> Mar 2021</span>
+                    <h3>Full-Stack Web Development (MEARN)</h3>
+                    <p>Information Technology Institute (ITI)</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="edu-col">
-                    <span>01-Jul-2019 <i>to</i> 31-Sep-2019</span>
-                    <h3>BIM Diploma</h3>
-                    <p>University to Work (UTW) 11th Round - BIM [Building Information Modeling]</p>
+                    <span>Jul 2019 <i>to</i> Sep 2019</span>
+                    <h3>BIM Track (UTW-11)</h3>
+                    <p>Engineering Consultants Group (ECG) · Best Member Award</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="edu-col">
-                    <span>01-Jan-2015 <i>to</i> 1-Aug-2019</span>
-                    <h3>Bachelor Degree</h3>
-                    <p>Mechanical Power Engineering - Helwan University</p>
+                    <span>2015 <i>to</i> 2019</span>
+                    <h3>B.Sc. in Mechanical Power Engineering</h3>
+                    <p>Helwan University, Cairo · Grade: Very Good · Graduation project: Excellent</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="edu-col">
-                    <span>01-Jul-2018 <i>to</i> 31-Sep-2018</span>
-                    <h3>HVAC design Diploma</h3>
-                    <p>University to Work (UTW) 10th Round - HVAC Design systems</p>
+                    <span>Jul 2018 <i>to</i> Sep 2018</span>
+                    <h3>HVAC Design Track (UTW-10)</h3>
+                    <p>Engineering Consultants Group (ECG) · Best Member & Best Project</p>
                 </div>
             </div>
             
@@ -264,34 +262,59 @@ class About_Page_comp extends React.Component {
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="exp-col">
-                    <span>01-Mar-2023 <i>to</i> Present</span>
-                    <h3>Allied BIM, LLC.</h3>
-                    <h4>Montana 59718, USA - Remotely Fulltime Upwork Freelacer</h4>
-                    <h5>Revit Developer</h5>
-                    <p>Revit API · C# · WPF · MVVM · .NET</p>
+                    <span>Mar 2023 <i>to</i> Present</span>
+                    <h3>Allied BIM, LLC</h3>
+                    <h4>Montana, USA (Remote) · Full-time via FRBIM, an Upwork agency</h4>
+                    <h5>AEC Software Developer</h5>
+                    <p>
+                        ● Maintain and extend "AlliedBIM - Fabrication Tools", an MEP fabrication add-in suite for Revit 2019–2027.<br/>
+                        ● Built conduit cutting, duct bank spacer and WPF/MVVM conduit-run data tools with Excel import/export.<br/>
+                        ● Built a cloud marketplace for publishing Revit families as GLB models and importing them back into projects.<br/>
+                        ● Contribute to "AlliedBIM - Fabrication Connected", a web platform on Autodesk Platform Services.<br/>
+                    </p>
+                    <p>Revit API · C# · WPF · MVVM · .NET · APS · WiX · Azure DevOps</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="exp-col">
-                    <span>01-Dec-2022 <i>to</i> 28-Feb-2023</span>
+                    <span>Project-based</span>
+                    <h3>FRBIM (Upwork agency)</h3>
+                    <h4>Remote</h4>
+                    <h5>Freelance AEC Software Developer</h5>
+                    <p>
+                        ● SPACEFIT (Puteaux, France): Revit API development, and started and built its APS web app for AI space planning.<br/>
+                        ● D'Angelo & Associates (Texas, USA): Revit tools for an AV and telecom (low-voltage) design firm.<br/>
+                    </p>
+                    <p>Revit API · C# · APS / Forge</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="exp-col">
+                    <span>Dec 2022 <i>to</i> Mar 2023</span>
                     <h3>Gallium</h3>
                     <h4>Cairo, Egypt</h4>
-                    <h5>BIM Specialist | BIM Developer</h5>
+                    <h5>BIM Specialist / Developer</h5>
+                    <p>● Developed a web-based BIM platform for facility management, linking building systems with IoT sensor data.<br/></p>
                     <p>Revit API · Forge APIs · AR VR MR · Unity · C# · Python · ReactJS · NodeJS · ThreeJS · JavaScript · HTML5 · CSS</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="exp-col">
-                    <span>01-Jul-2021 <i>to</i> 15-Nov-2022</span>
-                    <h3>FirstOption ES</h3>
+                    <span>Jul 2021 <i>to</i> Nov 2022</span>
+                    <h3>FirstOption Engineering Services</h3>
                     <h4>Cairo, Egypt</h4>
-                    <h5>BIM R&D Specialist</h5>
+                    <h5>BIM R&D Engineer</h5>
+                    <p>
+                        ● Built Revit add-ins and BIM automation tools, mainly for MEP modeling and coordination teams.<br/>
+                        ● Developed a digital twin platform and supporting web applications.<br/>
+                        ● Created AR/VR applications for exploring BIM models.<br/>
+                    </p>
                     <p>Revit API · Forge APIs · AR VR MR · C# · Python · JavaScript · HTML5 · CSS</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="exp-col">
-                    <span>01-Sep-2019 <i>to</i> 31-Aug-2020</span>
+                    <span>Sep 2019 <i>to</i> Aug 2020</span>
                     <h3>TEAServ ES</h3>
                     <h4>Cairo, Egypt</h4>
                     <h5>Mechanical BIM Engineer</h5>
@@ -351,7 +374,7 @@ class About_Page_comp extends React.Component {
             <div class="col-md-6">
                 <div class="contact-info">
                     <p><i class="fa fa-user"></i>Omar Amen</p>
-                    <p><i class="fa fa-tag"></i>BIM Software Developer</p>
+                    <p><i class="fa fa-tag"></i>AEC Software Developer</p>
                     <p><i class="fa fa-envelope"></i><a href="mailto:contact@omaramen.com">contact@omaramen.com</a></p>
                     <p><i class="fa fa-phone"></i><a href="tel:+201159390337">+20-115-939-0337</a></p>
                     <p><i class="fa fa-map-marker"></i>Maadi city, Cairo, Egypt</p>

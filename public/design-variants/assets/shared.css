@@ -50,10 +50,16 @@ a { color: inherit; }
 .vswitch button:hover { background: rgba(255, 255, 255, .12); }
 .vswitch button[aria-current] { background: #fafafa; color: #0d0d0d; }
 .vswitch button[aria-current] b { border-color: #0d0d0d; }
-@media (max-width: 1000px) {
+@media (max-width: 1180px) {
   .vswitch-label, .vswitch button span { display: none; }
   .vswitch button { padding: 6px; }
   .vswitch button b { width: 30px; height: 30px; font-size: 13px; }
+}
+/* small phones: seven round buttons must still fit in 320px */
+@media (max-width: 420px) {
+  .vswitch { gap: 1px; padding: 4px; bottom: 12px; }
+  .vswitch button { padding: 3px; }
+  .vswitch button b { width: 28px; height: 28px; font-size: 12px; }
 }
 
 /* ---------- project overlay ---------- */

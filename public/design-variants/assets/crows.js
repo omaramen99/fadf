@@ -42,7 +42,8 @@
       }).join('');
       return '<svg viewBox="0 0 400 300" class="' + (opts.cls || '') + '" aria-hidden="true">' +
         '<g stroke="' + fill + '" stroke-width="5">' + legs + '</g>' + facets +
-        '<circle cx="112" cy="82" r="4.5" fill="#fff"/><circle cx="111" cy="81" r="1.6" fill="' + fill + '"/></svg>';
+        // eye: white by default; pass opts.eye for a light-coloured crow on a dark background
+        '<circle cx="112" cy="82" r="4.5" fill="' + (opts.eye || '#fff') + '"/><circle cx="111" cy="81" r="1.6" fill="' + fill + '"/></svg>';
     },
     perchedWire: function (opts) {
       opts = opts || {};

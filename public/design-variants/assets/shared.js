@@ -7,7 +7,8 @@
     { n: 3, file: 'v3-blueprint.html', name: 'Blueprint Crow' },
     { n: 4, file: 'v4-sumi-draft.html', name: 'Sumi Draft' },
     { n: 5, file: 'v5-ink-vellum.html', name: 'Ink on Vellum' },
-    { n: 6, file: 'v6-sumi-sheet.html', name: 'Sumi Sheet' }
+    { n: 6, file: 'v6-sumi-sheet.html', name: 'Sumi Sheet' },
+    { n: 7, file: 'v7-crow-sheet.html', name: 'Crow Sheet' }
   ];
   var KEY = 'fadf-variant-pos';
 
@@ -55,7 +56,7 @@
     document.body.appendChild(bar);
     document.addEventListener('keydown', function (e) {
       if (e.target.closest('input, textarea') || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key >= '1' && e.key <= '6') go(+e.key);
+      if (e.key >= '1' && e.key <= '7') go(+e.key);
       if (e.key === 'Escape') closeProject();
     });
   }

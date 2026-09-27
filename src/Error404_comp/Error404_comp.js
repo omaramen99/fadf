@@ -1,110 +1,31 @@
-
-//------------------------------------
-//-------------------------------------------------
 import './Error404_comp.css';
-
-//import vidSrc from '../media/yt1s.com - Retrowave animation_1080p.mp4';
-//import ToDoElement_comp from '../ToDoElementt_comp/ToDoElement_comp';
-
-
 import React from "react";
-import { connect } from 'react-redux';
-import { setHistoryObj, setMatchObj } from '../store/actions';
+import { Link } from 'react-router-dom';
+import { Art, crowWire } from '../crows';
+import SectionHead_comp from '../SectionHead_comp/SectionHead_comp';
 
-
-
- class Error404_comp extends React.Component {
-  state = {
-    // skillImgMain : _400x500Skill,
-    // title: 'My Skills',
-    // details: 'Select a skill to see details',
-    // DetailsBtn : true
-
-  };
-
-  componentDidMount()
-  {
-    this.RecordHistory();
-console.log(this.props.state.history);
-console.log(this.props);
-
+export default class Error404_comp extends React.Component {
+  componentDidMount() {
+    document.title = 'Sheet not found · Omar Amen';
   }
-
-  RecordHistory()
-  {
-    if (!this.props.state.history) {
-      
-      this.props.setHistoryObj(this.props.history)
-    }
-    else{
-      
-      console.log(this.props);
-    }
-    this.props.setMatchObj(this.props.match)
-  }
-  // constructor(props)
-  // {
-   
-  //   super(props);
-  //   this.state={
-  //     complete : ""
-  //   };
-  // }
-
-
-
 
   render() {
-
-
     return (
-      <>
-
-<img class="error" src="https://www.wpoven.com/blog/wp-content/uploads/2019/12/404-error-not-found.png" alt=""/>
-
-                   
-
-      </>
+      <main className="notfound">
+        <div className="wrap">
+          <div className="sheet">
+            <SectionHead_comp no="404" title="Sheet" accent="not found" meta={this.props.location.pathname} />
+            <div className="nf-body">
+              <Art className="nf-crow" svg={crowWire('#111')} />
+              <div>
+                <p className="nf-big">This crow flew off with the page.</p>
+                <p className="note">The link may be old, or the page has moved to a section of the home page.</p>
+                <div className="nf-actions"><Link className="b solid" to="/">back_home →</Link><Link className="b" to="/projects">view_work</Link></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     );
   }
-
-  
 }
-const mapStateToProps = (state) => ({state})
-
-export default connect(mapStateToProps , {setHistoryObj, setMatchObj})(Error404_comp);
-
-
-
-
-// //------------------------------------
-// //-------------------------------------------------
-// import './Header_comp.css';
-// //import ToDoElement_comp from '../ToDoElementt_comp/ToDoElement_comp';
-// import ReactDOM from "react-dom";
-// import React from "react";
-
-// export default class Header_comp extends React.Component {
-//   state = {
-
-//   };
-//   // constructor(props)
-//   // {
-   
-//   //   super(props);
-//   //   this.state={
-//   //     complete : ""
-//   //   };
-//   // }
-
-
-//   render() {
-//     return (
-//       <>
-
-//       </>
-//     );
-//   }
-
-  
-// }

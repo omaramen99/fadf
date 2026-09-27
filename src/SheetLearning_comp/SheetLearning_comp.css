@@ -1,0 +1,17 @@
+.certs { display: grid; grid-template-columns: repeat(4, 1fr); }
+.cert { padding: 24px 22px; }
+.cert + .cert { border-left: 1px solid var(--line); }
+.cert .note { color: var(--ink); }
+.cert h3 { font-family: var(--font-display); font-weight: 400; font-size: 25px; line-height: 1.1; margin: 10px 0 6px; }
+.cert p { margin: 0; font-size: 14px; }
+.stamp { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; border: 1.5px solid var(--ink); border-radius: 6px; padding: 4px 9px; transform: rotate(-2.5deg); }
+.stamp svg { width: 8px; height: 26px; display: block; }
+@media (max-width: 900px) {
+  .certs { grid-template-columns: 1fr 1fr; }
+  .cert:nth-child(3) { border-left: 0; }
+  .cert:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .certs { grid-template-columns: 1fr; }
+  .cert + .cert { border-left: 0; border-top: 1px solid var(--line); }
+}

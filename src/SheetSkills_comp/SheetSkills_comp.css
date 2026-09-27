@@ -1,0 +1,37 @@
+/* skills table ("bill of materials") */
+.bom { width: 100%; border-collapse: collapse; }
+.bom th, .bom td { border-bottom: 1px solid var(--line); padding: 14px 18px; text-align: left; vertical-align: top; }
+.bom td + td, .bom th + th { border-left: 1px solid var(--line); }
+.bom th { font-family: var(--mono); font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); background: var(--wash); }
+.bom td:first-child { font-family: var(--mono); font-size: 12.5px; width: 76px; }
+.bom td:nth-child(2) { width: 240px; font-family: var(--font-display); font-size: 23px; line-height: 1.1; }
+.bom .g { display: flex; align-items: center; gap: 10px; }
+.bom .g svg { width: 10px; height: 32px; flex: none; display: block; }
+.bom tr:hover td { background: rgba(241, 239, 232, .6); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.tags li { font-size: 13px; padding: 4px 11px; border-radius: 999px; background: var(--wash); border: 1px solid transparent; transition: .2s; }
+.tags li:hover { border-color: var(--ink); background: transparent; }
+
+/* segmented level bars */
+.segs { display: grid; grid-template-columns: repeat(4, 1fr); border-top: var(--b); }
+.seg { padding: 18px 20px 20px; }
+.seg + .seg { border-left: 1px solid var(--line); }
+.seg .top { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 13px; margin-bottom: 10px; }
+.seg .bar { display: grid; grid-template-columns: repeat(20, 1fr); gap: 3px; }
+.seg .bar i { height: 14px; border: 1px solid var(--ink); background: transparent; transition: background .2s; }
+.segs.in .bar i.on { background: var(--ink); }
+
+@media (max-width: 860px) {
+  .bom thead { display: none; }
+  .bom tr { display: grid; grid-template-columns: 60px 1fr; }
+  .bom td:nth-child(2) { width: auto; }
+  .bom td:nth-child(3) { grid-column: 1 / -1; border-left: 0; padding-top: 0; }
+  .bom td:first-child, .bom td:nth-child(2) { border-bottom: 0; }
+  .segs { grid-template-columns: 1fr 1fr; }
+  .seg:nth-child(3) { border-left: 0; }
+  .seg:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 480px) {
+  .segs { grid-template-columns: 1fr; }
+  .seg + .seg { border-left: 0; border-top: 1px solid var(--line); }
+}

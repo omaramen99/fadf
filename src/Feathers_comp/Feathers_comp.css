@@ -1,0 +1,14 @@
+.feathers { position: fixed; inset: 0; z-index: 20; overflow: hidden; pointer-events: none; }
+.feather { position: absolute; top: 0; width: 22px; opacity: .15; animation: drift linear infinite; }
+.feather svg { width: 100%; height: auto; display: block; }
+@keyframes drift {
+  0% { transform: translate(0, -60px) rotate(-20deg); }
+  50% { transform: translate(40px, 50vh) rotate(25deg); }
+  100% { transform: translate(-20px, 110vh) rotate(-15deg); }
+}
+
+.glider { position: fixed; z-index: 30; left: 0; top: 0; width: 100px; pointer-events: none; opacity: .5; will-change: transform; }
+.glider svg { width: 100%; height: auto; display: block; animation: flap 1.6s ease-in-out infinite; transform-origin: 50% 40%; }
+@keyframes flap { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.72); } }
+
+@media (prefers-reduced-motion: reduce) { .feathers, .glider { display: none; } }

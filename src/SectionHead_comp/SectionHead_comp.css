@@ -1,0 +1,6 @@
+.sh { display: flex; align-items: stretch; border-bottom: var(--b); }
+.sh .no { display: flex; align-items: center; padding: 0 18px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 13px; }
+.sh h2 { flex: 1; margin: 0; padding: 14px 20px 12px; font-family: var(--font-display); font-weight: 300; font-size: clamp(32px, 4vw, 52px); line-height: 1; letter-spacing: -.01em; }
+.sh h2 em { font-style: italic; }
+.sh .meta { display: flex; align-items: center; padding: 0 18px; border-left: 1px solid var(--line); font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+@media (max-width: 640px) { .sh .meta { display: none; } }

@@ -172,6 +172,96 @@ export const Data =
     Skills:[]
 }
 
+// ---- Everything below is the site's text (from the CV). Projects stay in Data.Projects above. ----
+
+export const Profile = {
+    name: "Omar Amen",
+    role: "AEC Software Developer",
+    tagline: "MEP & Fabrication Tools for Revit",
+    // cycled by the typing line in the hero
+    titles: ["AEC Software Developer", "MEP & Fabrication Tools for Revit", "Revit API Developer", "APS / Forge Developer"],
+    location: "Cairo, Egypt",
+    email: "contact@omaramen.com",
+    phone: "+20 115 939 0337",
+    phoneHref: "tel:+201159390337",
+    site: "omaramen.com",
+    resume: "https://drive.google.com/u/1/uc?id=1yXUWIuvX49BdU52Fcg1l5QhoS0o0s0Mi&export=download",
+    summary: "AEC software developer with 5+ years of experience building BIM software, specializing in MEP and fabrication tools for Revit. A mechanical engineer with HVAC design training, bringing hands-on MEP knowledge to C#/.NET, WPF/MVVM, Revit API and Autodesk Platform Services development. Works remotely with teams in the US and Europe.",
+    quote: "A crow’s curiosity, an engineer’s mind."
+};
+
+// the key/value list next to the About text
+export const AboutFacts = [
+    ["role", "AEC Software Developer"],
+    ["focus", "MEP & fabrication · Revit"],
+    ["experience", "5+ years"],
+    ["revit", "2019 – 2027"],
+    ["based_in", "Cairo, Egypt"],
+    ["works_with", "US · Europe (remote)"],
+    ["education", "B.Sc. Mech. Power Eng."]
+];
+
+export const SkillGroups = [
+    { name: "MEP & Fabrication", items: ["Conduit tools", "Custom multi-tier strut hangers", "Duct bank tools", "Mechanical background"] },
+    { name: "BIM & Autodesk", items: ["Revit API", "Dynamo", "APS / Forge Viewer", "Model Derivative", "Design Automation"] },
+    { name: "Desktop & .NET", items: [".NET Framework 4.8", ".NET 8+", "WPF", "MVVM", "Excel automation (EPPlus)"] },
+    { name: "Web & 3D", items: ["React", "Node.js", "Express", "MongoDB", "Three.js", "Unity (AR/VR)", "glTF / GLB"] },
+    { name: "Languages", items: ["C#", "JavaScript (ES6+)", "Python", "HTML5", "CSS3", "Embedded C"] },
+    { name: "Tools & DevOps", items: ["Git", "Azure DevOps CI/CD", "WiX", "Inno Setup", "NUnit", "xUnit"] }
+];
+
+// segmented bars under the skills table (value is a percentage)
+export const SkillLevels = [
+    { name: "C# / .NET", value: 95 },
+    { name: "Revit API", value: 95 },
+    { name: "WPF / MVVM", value: 85 },
+    { name: "APS / Forge", value: 85 }
+];
+
+// latest first
+export const Experience = [
+    { role: "AEC Software Developer", org: "Allied BIM, LLC", where: "Montana, USA (Remote) · Full-time via FRBIM, an Upwork agency", when: "Mar 2023 – Present",
+      points: [
+        "Maintain and extend “AlliedBIM - Fabrication Tools” for Revit, an MEP fabrication add-in suite for Revit 2019–2027.",
+        "Built automated conduit cutting for electrical fabrication, handling elbows and parallel conduit banks.",
+        "Built a duct bank spacer tool that groups conduits and places spacers with concrete flow-through openings.",
+        "Created WPF/MVVM data tools for conduit runs with column filtering, Excel import/export and change comparison.",
+        "Built a cloud marketplace for publishing Revit families as GLB models and importing them back into projects.",
+        "Contribute to “AlliedBIM - Fabrication Connected”, a web platform built on Autodesk Platform Services.",
+        "Maintain installers (WiX, Inno Setup), Azure DevOps builds, licensing and automated tests."
+      ] },
+    { role: "Freelance AEC Software Developer", org: "FRBIM (Upwork agency)", where: "Remote", when: "Project-based",
+      points: [
+        "SPACEFIT (Puteaux, France): Revit API development, and started and built its APS web app for AI space planning.",
+        "D’Angelo & Associates (Texas, USA): Revit tools for an AV and telecom (low-voltage) design firm."
+      ] },
+    { role: "BIM Specialist / Developer", org: "Gallium", where: "Cairo, Egypt", when: "Dec 2022 – Mar 2023",
+      points: ["Developed a web-based BIM platform for facility management, linking building systems with IoT sensor data."] },
+    { role: "BIM R&D Engineer", org: "FirstOption Engineering Services", where: "Cairo, Egypt", when: "Jul 2021 – Nov 2022",
+      points: [
+        "Built Revit add-ins and BIM automation tools, mainly for MEP modeling and coordination teams.",
+        "Developed a digital twin platform and supporting web applications.",
+        "Created AR/VR applications for exploring BIM models."
+      ] },
+    { role: "Mechanical BIM Engineer", org: "TEAServ ES", where: "Cairo, Egypt", when: "Sep 2019 – Aug 2020",
+      points: ["Revit · MEP coordination · MEP modeling · Navisworks · BIM 360"] }
+];
+
+export const Education = [
+    { title: "B.Sc. in Mechanical Power Engineering", org: "Helwan University, Cairo", when: "2015 – 2019", note: "Grade: Very Good · Graduation project: Excellent" },
+    { title: "Full-Stack Web Development (MEARN)", org: "Information Technology Institute (ITI)", when: "Nov 2020 – Mar 2021", note: "" },
+    { title: "BIM Track (UTW-11)", org: "Engineering Consultants Group (ECG)", when: "Jul – Sep 2019", note: "Best Member Award" },
+    { title: "HVAC Design Track (UTW-10)", org: "Engineering Consultants Group (ECG)", when: "Jul – Sep 2018", note: "Best Member & Best Project" }
+];
+
+export const Social = [
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/omaramenbim/" },
+    { name: "Upwork", url: "https://www.upwork.com/freelancers/~010e2c3b929aaf2239" },
+    { name: "YouTube", url: "https://www.youtube.com/channel/UCxcQOXC73rlM9DEcsz9pwLA" },
+    { name: "Facebook", url: "https://www.facebook.com/omar.amen32/" },
+    { name: "X / Twitter", url: "https://twitter.com/omarame54520814" }
+];
+
 
 
 

@@ -1,5 +1,6 @@
-.error
-{
-    width: 100vw;
-    height: 100vh;
-}
+.notfound { padding: clamp(24px, 4vw, 44px) 0 clamp(44px, 6vw, 76px); }
+.nf-body { display: grid; grid-template-columns: minmax(180px, 360px) 1fr; align-items: center; gap: clamp(20px, 4vw, 48px); padding: clamp(24px, 4vw, 48px); }
+.nf-crow svg { width: 100%; height: auto; display: block; }
+.nf-big { font-family: var(--font-display); font-weight: 300; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; margin: 0 0 12px; }
+.nf-actions { display: flex; flex-wrap: wrap; margin-top: 22px; }
+@media (max-width: 700px) { .nf-body { grid-template-columns: 1fr; } .nf-crow { max-width: 260px; } }

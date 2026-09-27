@@ -1,0 +1,18 @@
+.titleblock { display: grid; grid-template-columns: auto repeat(5, 1fr); border-top: var(--b); font-family: var(--mono); font-size: 12px; }
+.titleblock > div { padding: 10px 14px; border-left: 1px solid var(--ink); min-width: 0; }
+.titleblock small { display: block; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.titleblock .tb-seal { border-left: 0; display: grid; place-items: center; background: var(--ink); padding: 6px 18px; }
+.titleblock .tb-seal svg { width: 46px; height: auto; display: block; }
+
+/* tablets and phones: seal on the left spanning 3 rows; fields in 2 columns, "sheet" across the bottom */
+@media (max-width: 900px) {
+  .titleblock { grid-template-columns: 76px 1fr 1fr; }
+  .titleblock > div { overflow-wrap: anywhere; }
+  .titleblock .tb-seal { grid-row: 1 / span 3; padding: 6px 10px; }
+  .titleblock > div:nth-child(n+4) { border-top: 1px solid var(--ink); }
+  .titleblock > div:nth-child(6) { grid-column: 2 / -1; }
+}
+@media (max-width: 400px) {
+  .titleblock { grid-template-columns: 64px 1fr 1fr; }
+  .titleblock > div { padding: 9px; font-size: 11px; overflow-wrap: normal; }
+}

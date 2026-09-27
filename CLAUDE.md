@@ -31,52 +31,40 @@ Create React App project (`react-scripts` 4, React 17, plain JS). There is no ba
 
 ## Architecture
 
-**Routing** ([src/App.js](src/App.js)): `react-router-dom` v5 `<Switch>` with these routes, plus a catch-all `Error404_comp`:
+**Design:** the "Crow Sheet" look: black ink on light drafting paper, each section framed like a technical drawing sheet, with a crow as the logo. Design tokens (colours, fonts, `--b` border) are CSS variables in [src/index.css](src/index.css). Fonts come from Google Fonts in [public/index.html](public/index.html). There are no CSS frameworks or CDN scripts.
+
+**Routing** ([src/App.js](src/App.js)): `react-router-dom` v5. The whole site is one page, `Home_comp`, rendered for all of these paths:
 - `/`
-- `/skill`
-- `/portfolio/:id`
-- `/about`
-- `/projects`
+- `/about`, `/skill`, `/projects`, `/journey`, `/learning`, `/contact`: scroll to that section (map in `SECTION_BY_PATH` in `Home_comp`). The nav links use these paths.
+- `/portfolio/:id`: opens that project's overlay (`ProjectSheet_comp`). Closing it replaces the URL, so Back doesn't reopen it.
 
-`Header_comp` and `Footer_comp` wrap every route.
+Anything else renders `Error404_comp`. `Header_comp` and `Footer_comp` wrap every route; `Feathers_comp` (drifting feathers + gliding crow) sits on top in a fixed layer.
 
-**Navigation via Redux:** Components outside `<Route>` (Header, Footer, cards) don't get router props. To work around this, each page component stores its `this.props.history` and `this.props.match` in Redux on mount, using `setHistoryObj` and `setMatchObj`. Other components then navigate with `this.props.state.history.push(...)`.
-- Keep this pattern when adding pages.
-- If a page doesn't register history, `state.history` stays `false` and breaks the components that rely on it.
+**Components** (`src/<Name>_comp/`, class components, one CSS file each):
+- Page sections, in order: `SheetHero_comp`, `SheetAbout_comp`, `SheetSkills_comp`, `SheetWork_comp`, `SheetJourney_comp`, `SheetLearning_comp`, `SheetContact_comp`.
+- Shared pieces: `SectionHead_comp` (numbered header bar), `TitleBlock_comp` (the drawing title block under the hero and in the footer).
+- Crow artwork is in [src/crows.js](src/crows.js): functions return SVG strings, rendered with its `<Art>` component.
+- Fade-in on scroll: add class `rv` to an element; `Home_comp` adds `in` when it scrolls into view.
 
-**Redux** ([src/store/](src/store/)):
-- One flat reducer, created with `createStore` and Redux DevTools.
-- Components use `connect`, and `mapStateToProps` returns `{ state }`, so they read `this.props.state.<field>`.
-- The cart, books and products actions and fields are leftovers from another project and are unused.
+**Content** lives in [src/appData.js](src/appData.js):
+- `Data.Projects`: each project has `id` (UUID, used in `/portfolio/:id`), `Name`, `MinDiscription`, `Discription`, `Images`, `Tools`, `Features`, `YoutubeVidId`, `DownloadLink`, `SimilarProjectsIds`, `IsActive`. The misspelled keys are intentional and used throughout the code. **Do not rename them.** Only `IsActive` projects are shown. Project images are imported at the top of the file.
+- `Data.TopProjects`: IDs marked "★ featured".
+- `Profile`, `AboutFacts`, `SkillGroups`, `SkillLevels`, `Experience`, `Education`, `Social`: all other text on the site, from the CV.
+- [public/index.html](public/index.html) has a hidden plain-text summary for crawlers (`.meta_Container`) and the page title/description/share tags. Keep them in sync with `appData.js` when the CV text changes. The share image is [public/og-image.png](public/og-image.png).
 
-**Content is split across two places:**
-- **Projects** live in [src/appData.js](src/appData.js) as `Data.Projects`.
-  - Each project has `id`, a UUID string used in `/portfolio/:id`.
-  - Other fields: `Name`, `MinDiscription`, `Discription`, `Images`, `Tools`, `Features`, `YoutubeVidId`, `DownloadLink`, `SimilarProjectsIds`, `IsActive`.
-  - The misspelled keys are intentional and used throughout the code. **Do not rename them.**
-  - `Data.TopProjects` lists the IDs featured on the home page.
-  - Project images are imported at the top of this file.
-- **Skills** are *not* in `appData.js`; `Data.Skills` is empty. They are hardcoded as `<SkillsBtn_comp>` props in [src/Skills_comp/Skills_comp.js](src/Skills_comp/Skills_comp.js).
-  - Image paths are strings, for example `'media/100x100HTML.png'`, resolved by a dynamic `require(\`../${path}\`)`.
-  - So every skill needs matching `src/media/100x100<Name>.png` and `400x500<Name>.png` files.
+**Backend calls** (to the Render backend, see "Related project"):
+- `Header_comp` pings `GET /api/ping` on load and, if it answers `pinged`, records the visit with `POST /api/traffic/record`. This runs in the background; nothing waits for it.
+- `SheetContact_comp` sends `POST /api/sendmail?name=&mail=&subject=&message=` (URL-encoded query string).
 
-**Components:**
-- Each component lives in `src/<Name>_comp/` with `<Name>_comp.js` and `<Name>_comp.css`.
-- Most are class components.
-- Markup uses `class=` rather than `className` in many places. Don't mass-convert it unless asked.
-
-**Global scripts from CDN** ([public/index.html](public/index.html)):
-- These are loaded as globals, not npm packages: Bootstrap 4.5 (CSS and JS), jQuery, Popper, Chart.js 2.9, typed.js, jQuery Waypoints and Font Awesome.
-- Some components call them directly without importing, for example `new Chart(...)` in `Skills_topPage_comp` and `new Typed(...)` in `About_Page_comp`.
-- Don't add npm versions of these alongside the CDN ones.
+**Leftovers:** Redux ([src/store/](src/store/)) is still wired up in `src/index.js` but no component uses it. `redux`, `react-redux` and `react-helmet` are unused dependencies. Ask before removing them.
 
 ## Conventions
 
 - New components follow the `src/<Name>_comp/` pattern.
-- Keep plain CSS and Bootstrap 4. Don't introduce Tailwind, styled-components or another UI library unless I ask.
+- Keep plain CSS with the tokens in `src/index.css`. Don't introduce Bootstrap, Tailwind, styled-components or another UI library unless I ask.
 - Don't migrate to TypeScript, Vite, React 18, Router v6, hooks or function components on your own. Suggest it, then wait for my OK.
 - **Don't add new npm dependencies without asking.**
-- `axios` is in dependencies but unused. Ask before removing it or the leftover cart/books Redux code.
+- `axios` is used for the backend calls. Ask before removing the unused Redux code or dependencies.
 
 ## Related project
 

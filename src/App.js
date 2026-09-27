@@ -1,38 +1,37 @@
-
 import './App.css';
 import Header_comp from './Header_comp/Header_comp';
 import Footer_comp from './Footer_comp/Footer_comp';
 import Home_comp from './Home_comp/Home_comp';
-import Skills_Page_comp from './Skills_Page_comp/Skills_Page_comp';
-import Project2_Page_comp from './Project2_Page_comp/Project2_Page_comp';
-import About_Page_comp from './About_Page_comp/About_Page_comp';
-import Projects_Page_comp from './Projects_Page_comp/Projects_Page_comp';
 import Error404_comp from './Error404_comp/Error404_comp';
+import Feathers_comp from './Feathers_comp/Feathers_comp';
 
-import {BrowserRouter as Router , Route, Switch, Link, withRouter} from 'react-router-dom';
-import history from './history';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React from 'react';
 
 function App() {
-  
   return (
-  
-    <>
-    <Router history={history}>
+    <Router>
+      {/* SVG filter that gives shapes with class "ink" their brushed edge */}
+      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+        <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="7" />
+          <feGaussianBlur stdDeviation=".35" />
+        </filter>
+      </svg>
 
-      <Header_comp />
+      <div className="site">
+        <Header_comp />
         <Switch>
-          <Route path='/' exact  component={Home_comp}  />
-          <Route path='/skill' exact component={Skills_Page_comp} />
-          {/* <Route path='/project/:id' exact component={Project_Page_comp} /> */}
-          <Route path='/portfolio/:id' exact component={Project2_Page_comp} />
-          <Route path='/about' exact component={About_Page_comp} />
-          <Route path='/projects' exact component={Projects_Page_comp} />
-          <Route path=''   component={Error404_comp}  />
+          {/* One page. The old URLs still work: they scroll to a section or open a project. */}
+          <Route path={['/', '/about', '/skill', '/projects', '/journey', '/learning', '/contact', '/portfolio/:id']} exact component={Home_comp} />
+          <Route component={Error404_comp} />
         </Switch>
-      <Footer_comp />
+        <Footer_comp />
+      </div>
+
+      <Feathers_comp />
     </Router>
-    </>
   );
 }
 

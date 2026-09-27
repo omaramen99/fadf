@@ -178,8 +178,10 @@ export const Profile = {
     name: "Omar Amen",
     role: "AEC Software Developer",
     tagline: "MEP & Fabrication Tools for Revit",
+    // the plain sentence under the name in the hero (says BIM / AEC in words, since the typing line is animated)
+    heroLine: "BIM software for the AEC industry: MEP & fabrication tools for Revit. Mechanical engineer turned developer.",
     // cycled by the typing line in the hero
-    titles: ["AEC Software Developer", "MEP & Fabrication Tools for Revit", "Revit API Developer", "APS / Forge Developer"],
+    titles: ["AEC Software Developer", "BIM Software Developer", "MEP & Fabrication Tools for Revit", "Revit API Developer", "APS / Forge Developer"],
     location: "Cairo, Egypt",
     email: "contact@omaramen.com",
     phone: "+20 115 939 0337",
@@ -193,6 +195,7 @@ export const Profile = {
 // the key/value list next to the About text
 export const AboutFacts = [
     ["role", "AEC Software Developer"],
+    ["industry", "AEC · BIM · MEP"],
     ["focus", "MEP & fabrication · Revit"],
     ["experience", "5+ years"],
     ["revit", "2019 – 2027"],
@@ -255,7 +258,7 @@ export const Education = [
 ];
 
 export const Social = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/omaramenbim/" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/omar-amen-19a374189" },
     { name: "Upwork", url: "https://www.upwork.com/freelancers/~010e2c3b929aaf2239" },
     { name: "YouTube", url: "https://www.youtube.com/channel/UCxcQOXC73rlM9DEcsz9pwLA" },
     { name: "Facebook", url: "https://www.facebook.com/omar.amen32/" },

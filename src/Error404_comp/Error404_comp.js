@@ -3,10 +3,16 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { Art, crowWire } from '../crows';
 import SectionHead_comp from '../SectionHead_comp/SectionHead_comp';
+import { setPageMeta, resetPageMeta } from '../seo';
 
 export default class Error404_comp extends React.Component {
+  // Vercel answers unknown URLs with the app (status 200), so tell search engines not to index this page
   componentDidMount() {
-    document.title = 'Sheet not found · Omar Amen';
+    setPageMeta({ title: 'Sheet not found · Omar Amen', path: this.props.location.pathname, noindex: true });
+  }
+
+  componentWillUnmount() {
+    resetPageMeta();
   }
 
   render() {

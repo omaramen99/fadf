@@ -50,7 +50,12 @@ Anything else renders `Error404_comp`. `Header_comp` and `Footer_comp` wrap ever
 - `Data.Projects`: each project has `id` (UUID, used in `/portfolio/:id`), `Name`, `MinDiscription`, `Discription`, `Images`, `Tools`, `Features`, `YoutubeVidId`, `DownloadLink`, `SimilarProjectsIds`, `IsActive`. The misspelled keys are intentional and used throughout the code. **Do not rename them.** Only `IsActive` projects are shown. Project images are imported at the top of the file.
 - `Data.TopProjects`: IDs marked "★ featured".
 - `Profile`, `AboutFacts`, `SkillGroups`, `SkillLevels`, `Experience`, `Education`, `Social`: all other text on the site, from the CV.
-- [public/index.html](public/index.html) has a hidden plain-text summary for crawlers (`.meta_Container`) and the page title/description/share tags. Keep them in sync with `appData.js` when the CV text changes. The share image is [public/og-image.png](public/og-image.png).
+- **SEO copies of the content** must be kept in sync with `appData.js` when the CV or projects change:
+  - [public/index.html](public/index.html): the title, description, share tags, the JSON-LD `Person` data (skills, `sameAs` profile links), and a plain-HTML version of the page inside `#root` (read by crawlers that don't run JavaScript; React replaces it on load).
+  - [public/sitemap.xml](public/sitemap.xml): home plus one `/portfolio/<id>` URL per project.
+  - Per-project titles/descriptions and the 404 `noindex` are set at runtime by [src/seo.js](src/seo.js).
+- The live site is `https://www.omaramen.com` (the bare domain redirects there); use the `www` form in canonical URLs.
+- Icons in `public/`: `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `logo192.png`, `logo512.png`, `maskable-512.png` (the crow logo). The share image is [public/og-image.png](public/og-image.png).
 
 **Backend calls** (to the Render backend, see "Related project"):
 - `Header_comp` pings `GET /api/ping` on load and, if it answers `pinged`, records the visit with `POST /api/traffic/record`. This runs in the background; nothing waits for it.

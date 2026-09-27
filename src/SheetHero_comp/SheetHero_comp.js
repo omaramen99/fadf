@@ -40,14 +40,14 @@ export default class SheetHero_comp extends React.Component {
                 <span className="tag"><span>SHEET A-001</span><span>·</span><span>PORTFOLIO</span></span>
                 <div className="portrait-row">
                   <div className="enso">
-                    <img className="mono" src={portrait} alt={Profile.name} width="400" height="400" />
+                    <img className="mono" src={portrait} alt={Profile.name + ", AEC & BIM software developer"} width="400" height="400" />
                     <Art svg={enso(9)} />
                   </div>
                   <span className="note">fig. 01 · the developer<br />{Profile.location}<br />remote · US &amp; EU</span>
                 </div>
                 <h1>{first} <em>{last}</em></h1>
                 <p className="typer" aria-label={Profile.titles.join(', ')}><span aria-hidden="true">{this.state.typed}<i /></span></p>
-                <p className="sub">{Profile.tagline}. Mechanical engineer turned developer.</p>
+                <p className="sub">{Profile.heroLine}</p>
                 <div className="actions">
                   <Link className="b solid" to="/projects">view_work →</Link>
                   <Link className="b" to="/contact">contact()</Link>

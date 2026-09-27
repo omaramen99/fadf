@@ -1,5 +1,6 @@
 import React from "react";
 import { Data, Profile } from '../appData';
+import { setPageMeta, resetPageMeta, snippet } from '../seo';
 import SheetHero_comp from '../SheetHero_comp/SheetHero_comp';
 import SheetAbout_comp from '../SheetAbout_comp/SheetAbout_comp';
 import SheetSkills_comp from '../SheetSkills_comp/SheetSkills_comp';
@@ -18,7 +19,6 @@ const SECTION_BY_PATH = {
   '/learning': 'education',
   '/contact': 'contact'
 };
-const BASE_TITLE = Profile.name + ' · ' + Profile.role;
 
 export default class Home_comp extends React.Component {
   state = { projectId: null };
@@ -35,7 +35,7 @@ export default class Home_comp extends React.Component {
 
   componentWillUnmount() {
     if (this.io) this.io.disconnect();
-    document.title = BASE_TITLE;
+    resetPageMeta();
   }
 
   // Sync the page with the URL: /portfolio/:id opens a project, section URLs scroll to that section.
@@ -44,7 +44,16 @@ export default class Home_comp extends React.Component {
     const id = this.props.match.params.id;
     const project = id && this.projects.find((p) => p.id === id);
     this.setState({ projectId: project ? project.id : null });
-    document.title = project ? project.Name + ' · ' + Profile.name : BASE_TITLE;
+    // each project URL gets its own search title/description; section URLs all point to the home page
+    if (project) {
+      setPageMeta({
+        title: project.Name + ' · Revit & BIM project by ' + Profile.name,
+        description: snippet(project.Discription || project.MinDiscription),
+        path: '/portfolio/' + project.id
+      });
+    } else {
+      resetPageMeta();
+    }
     if (project) return;
 
     // Closing a project (or pressing Back out of one) should leave the page where it was.

@@ -34,7 +34,7 @@ export default class SheetWork_comp extends React.Component {
                 <a key={p.id} href={'/portfolio/' + p.id} className="spec mono-host rv"
                   onMouseEnter={this.onEnter} onClick={(ev) => this.open(ev, p.id)}>
                   <div className="spec-h"><span>PRJ-{pad2(i + 1)}</span><span>{featured.indexOf(p.id) > -1 ? '★ featured' : 'rev. 1'}</span></div>
-                  <div className="spec-img"><img className="mono" src={p.Images[0]} alt="" loading="lazy" /></div>
+                  <div className="spec-img"><img className="mono" src={p.Images[0]} alt={p.Name + ": " + p.MinDiscription} loading="lazy" /></div>
                   <h3>{p.Name}</h3>
                   <p>{p.MinDiscription}</p>
                   <div className="chips">{p.Tools.slice(0, 4).map((t) => <span key={t}>{t}</span>)}</div>

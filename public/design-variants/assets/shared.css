@@ -50,7 +50,7 @@ a { color: inherit; }
 .vswitch button:hover { background: rgba(255, 255, 255, .12); }
 .vswitch button[aria-current] { background: #fafafa; color: #0d0d0d; }
 .vswitch button[aria-current] b { border-color: #0d0d0d; }
-@media (max-width: 560px) {
+@media (max-width: 860px) {
   .vswitch-label, .vswitch button span { display: none; }
   .vswitch button { padding: 6px; }
   .vswitch button b { width: 30px; height: 30px; font-size: 13px; }

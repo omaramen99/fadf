@@ -4,7 +4,9 @@
   var VARIANTS = [
     { n: 1, file: 'v1-corvus.html', name: 'Corvus' },
     { n: 2, file: 'v2-ink.html', name: 'Ink & Feather' },
-    { n: 3, file: 'v3-blueprint.html', name: 'Blueprint Crow' }
+    { n: 3, file: 'v3-blueprint.html', name: 'Blueprint Crow' },
+    { n: 4, file: 'v4-sumi-draft.html', name: 'Sumi Draft' },
+    { n: 5, file: 'v5-ink-vellum.html', name: 'Ink on Vellum' }
   ];
   var KEY = 'fadf-variant-pos';
 
@@ -52,7 +54,7 @@
     document.body.appendChild(bar);
     document.addEventListener('keydown', function (e) {
       if (e.target.closest('input, textarea') || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key >= '1' && e.key <= '3') go(+e.key);
+      if (e.key >= '1' && e.key <= '5') go(+e.key);
       if (e.key === 'Escape') closeProject();
     });
   }

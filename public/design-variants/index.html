@@ -25,6 +25,8 @@
   .card span.go { margin-top: auto; font-weight: 600; font-size: 14px; }
   .how { margin-top: 32px; font-size: 14px; color: var(--muted); border-top: 1px solid #d8d6cf; padding-top: 18px; }
   kbd { border: 1px solid var(--ink); border-bottom-width: 2px; padding: 0 6px; font-size: 12px; background: #fff; }
+  .grid h3 { grid-column: 1 / -1; margin: 18px 0 0; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  a.card.new { border-width: 2px; }
   @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -32,14 +34,19 @@
 <main>
   <header>
     <div id="crow"></div>
-    <div><h1>Portfolio redesign: 3 variants</h1><p>Light, black &amp; white and crow-inspired. Same content in each, so you can compare the design only.</p></div>
+    <div><h1>Portfolio redesign: 5 variants</h1><p>Light, black &amp; white and crow-inspired. Same content in each, so you can compare the design only.</p></div>
   </header>
   <div class="grid">
+    <h3>New: blends of 2 &amp; 3</h3>
+    <a class="card new" href="v4-sumi-draft.html"><span class="n">Variant 4 · mostly 2</span><h2>Sumi Draft</h2><p>Ink &amp; Feather on drafting paper. The ensō portrait, feathers and gliding crow, plus a hand-inked wireframe crow, mono margin notes, stamped awards and a seal title block.</p><span class="go">Open →</span></a>
+    <a class="card new" href="v5-ink-vellum.html"><span class="n">Variant 5 · mostly 3</span><h2>Ink on Vellum</h2><p>Blueprint sheet with ink. The grid, tables and spec sheets, plus an ensō behind the wireframe crow, serif italic accents, ink-wash hovers, a fly-by crow and a 烏 seal.</p><span class="go">Open →</span></a>
+    <span></span>
+    <h3>First round</h3>
     <a class="card" href="v1-corvus.html"><span class="n">Variant 1</span><h2>Corvus</h2><p>Editorial monochrome. A magazine masthead, huge serif type, numbered sections and a project index that previews covers on hover.</p><span class="go">Open →</span></a>
     <a class="card" href="v2-ink.html"><span class="n">Variant 2</span><h2>Ink &amp; Feather</h2><p>Calm sumi-e ink. Paper grain, a brushed ensō around your photo, drifting feathers and a crow that glides across as you scroll.</p><span class="go">Open →</span></a>
     <a class="card" href="v3-blueprint.html"><span class="n">Variant 3</span><h2>Blueprint Crow</h2><p>Technical drawing sheet. A drafting grid, a wireframe crow that draws itself, a drawing title block and spec-sheet project cards.</p><span class="go">Open →</span></a>
   </div>
-  <p class="how">Inside any variant, switch with the black bar at the bottom or the keys <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>. You stay on the same section, so it's easy to compare. Click any project to open its details; <kbd>Esc</kbd> closes it.</p>
+  <p class="how">Inside any variant, switch with the black bar at the bottom or the keys <kbd>1</kbd> to <kbd>5</kbd>. You stay on the same section, so it's easy to compare. Click any project to open its details; <kbd>Esc</kbd> closes it.</p>
 </main>
 <script src="assets/crows.js"></script>
 <script>document.getElementById('crow').innerHTML = CROW.perchedSolid();</script>

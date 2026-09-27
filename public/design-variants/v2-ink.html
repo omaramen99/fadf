@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/icoon.ico">
+<title>Omar Amen · Variant 2 · Ink & Feather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+  :root {
+    --ink: #151515; --paper: #fbfaf6; --muted: #7a776f; --line: #e3e0d6; --wash: #f1efe8;
+    --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Manrope', system-ui, sans-serif;
+    --radius: 18px; --pad: clamp(16px, 5vw, 72px);
+  }
+  body {
+    font-weight: 400; font-size: 16px;
+    /* faint paper grain */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 var(--pad); }
+  .ink { filter: url(#ink); }
+
+  /* nav */
+  .nav { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .4s, box-shadow .4s; }
+  .nav.solid { background: rgba(251, 250, 246, .88); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+  .nav .wrap { display: flex; align-items: center; height: 70px; gap: 28px; }
+  .mark { font-family: 'Shippori Mincho', serif; font-size: 26px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .mark small { font-family: var(--font-body); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+  .nav ul { display: flex; gap: 30px; list-style: none; margin: 0 0 0 auto; padding: 0; font-size: 14px; }
+  .nav ul a { text-decoration: none; color: var(--muted); transition: color .2s; }
+  .nav ul a:hover { color: var(--ink); }
+  @media (max-width: 760px) { .nav ul { display: none; } }
+
+  /* hero */
+  .hero { min-height: 100vh; display: grid; place-items: center; text-align: center; position: relative; overflow: hidden; padding: 110px 0 80px; }
+  .kanji { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -52%); font-family: 'Shippori Mincho', serif; font-size: min(78vw, 720px); line-height: 1; color: #000; opacity: .035; pointer-events: none; user-select: none; }
+  .enso { position: relative; width: min(66vw, 340px); aspect-ratio: 1; margin: 0 auto 30px; }
+  .enso svg { position: absolute; inset: -9%; width: 118%; height: 118%; }
+  .enso svg circle { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: brush 2.4s cubic-bezier(.6, .1, .2, 1) .3s forwards; }
+  @keyframes brush { to { stroke-dashoffset: 70; } }
+  .enso img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .hero h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(56px, 9vw, 128px); line-height: .95; letter-spacing: -.02em; margin: 0; }
+  .hero h1 em { font-style: italic; }
+  .hero .role { font-size: 13px; letter-spacing: .32em; text-transform: uppercase; margin: 22px 0 0; }
+  .hero .sub { font-family: var(--font-display); font-style: italic; font-size: clamp(20px, 2.2vw, 26px); color: var(--muted); margin: 10px 0 0; }
+  .scroll-cue { position: absolute; bottom: 28px; left: 50%; width: 1px; height: 56px; background: linear-gradient(var(--ink), transparent); animation: cue 2.2s ease-in-out infinite; }
+  @keyframes cue { 0%, 100% { transform: scaleY(.4); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } }
+
+  /* flying crow + drifting feathers */
+  .glider { position: fixed; z-index: 30; left: 0; top: 0; width: 120px; pointer-events: none; opacity: .55; will-change: transform; }
+  .glider svg { animation: flap 1.6s ease-in-out infinite; transform-origin: 50% 40%; }
+  @keyframes flap { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.72); } }
+  .feather { position: absolute; width: 22px; opacity: .16; animation: drift linear infinite; pointer-events: none; }
+  @keyframes drift {
+    0% { transform: translate(0, -60px) rotate(-20deg); }
+    50% { transform: translate(40px, 50vh) rotate(25deg); }
+    100% { transform: translate(-20px, 110vh) rotate(-15deg); }
+  }
+  @media (max-width: 700px) { .glider { width: 90px; } }
+
+  /* sections */
+  section[data-sec]:not(.hero) { padding: clamp(80px, 11vw, 150px) 0; }
+  .eyebrow { display: flex; align-items: center; gap: 14px; font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+  .eyebrow::before { content: ''; width: 36px; height: 1px; background: var(--ink); }
+  .h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -.015em; margin: 0 0 clamp(36px, 5vw, 64px); }
+  .h2 em { font-style: italic; }
+
+  /* about */
+  .about { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(30px, 6vw, 90px); align-items: start; }
+  .about-side { position: sticky; top: 110px; }
+  .about-side .h2 { font-size: clamp(38px, 4.2vw, 58px); }
+  .about p.big { font-family: var(--font-display); font-size: clamp(24px, 2.7vw, 34px); line-height: 1.35; margin: 0; font-weight: 400; }
+  .about-stats { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 44px; }
+  .about-stats div b { display: block; font-family: var(--font-display); font-size: 46px; font-weight: 300; line-height: 1; }
+  .about-stats div span { font-size: 13px; color: var(--muted); }
+  .about-crow { width: 220px; margin-top: 8px; }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; } .about-side { position: static; } }
+
+  /* skills */
+  .skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: rgba(255, 255, 255, .6); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; transition: transform .4s, box-shadow .4s, border-color .4s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -24px rgba(0, 0, 0, .25); border-color: #cfcbbf; }
+  .card h3 { font-family: var(--font-display); font-size: 27px; font-weight: 400; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+  .card h3 svg { width: 12px; height: 38px; flex: none; }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; margin: 0; padding: 0; }
+  .tags li { font-size: 13px; padding: 5px 12px; border-radius: 999px; background: var(--wash); }
+  .brush-levels { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 60px; margin-top: 60px; }
+  .bl span { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; }
+  .bl span b { font-family: var(--font-display); font-size: 22px; font-weight: 400; }
+  .bl svg { width: 100%; height: 18px; display: block; }
+  .bl path { stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 2s cubic-bezier(.3, .6, .2, 1); }
+  .brush-levels.in .bl path { stroke-dashoffset: var(--off); }
+  @media (max-width: 900px) { .skill-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .skill-grid, .brush-levels { grid-template-columns: 1fr; } }
+
+  /* work */
+  .works { display: grid; grid-template-columns: repeat(6, 1fr); gap: 28px 22px; }
+  .work { grid-column: span 2; text-decoration: none; display: block; }
+  .work.big { grid-column: span 3; }
+  .work .img { overflow: hidden; border-radius: var(--radius); aspect-ratio: 4 / 3; background: var(--wash); }
+  .work.big .img { aspect-ratio: 16 / 10; }
+  .work img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.02); }
+  .work:hover img { transform: scale(1.07); }
+  .work h3 { font-family: var(--font-display); font-weight: 400; font-size: 26px; margin: 14px 0 2px; line-height: 1.15; }
+  .work p { margin: 0; font-size: 14px; color: var(--muted); }
+  .work .meta { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+  @media (max-width: 900px) { .works { grid-template-columns: 1fr 1fr; } .work, .work.big { grid-column: span 1; } }
+  @media (max-width: 560px) { .works { grid-template-columns: 1fr; } }
+
+  /* experience timeline */
+  .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+  .timeline::before { content: ''; position: absolute; left: 150px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+  .tl-item { display: grid; grid-template-columns: 150px 1fr; gap: 0 44px; padding-bottom: 54px; position: relative; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-when { font-size: 13px; color: var(--muted); padding-top: 7px; text-align: right; padding-right: 26px; }
+  .tl-dot { position: absolute; left: 141px; top: 6px; width: 19px; height: 19px; }
+  .tl-item h3 { font-family: var(--font-display); font-weight: 400; font-size: 30px; line-height: 1.1; margin: 0; }
+  .tl-org { margin: 4px 0 0; font-weight: 600; font-size: 15px; }
+  .tl-where { margin: 0 0 12px; font-size: 14px; color: var(--muted); }
+  .tl-item ul { margin: 0; padding-left: 18px; }
+  .tl-item li { margin-bottom: 6px; }
+  .tl-item li::marker { color: #b5b1a6; }
+  @media (max-width: 700px) {
+    .timeline::before { left: 8px; }
+    .tl-item { grid-template-columns: 1fr; padding-left: 36px; }
+    .tl-when { text-align: left; padding: 0 0 6px; }
+    .tl-dot { left: -1px; }
+  }
+
+  /* education */
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .edu .card h3 { font-size: 25px; margin-bottom: 6px; }
+  .edu .when { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .edu p { margin: 0; }
+  .edu .award { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13px; font-style: italic; font-family: var(--font-display); font-size: 19px; }
+  .edu .award svg { width: 10px; height: 30px; }
+  @media (max-width: 700px) { .edu { grid-template-columns: 1fr; } }
+
+  /* contact */
+  .contact { text-align: center; }
+  .contact .perched { width: 180px; margin: 0 auto 10px; }
+  .contact .h2 { margin-bottom: 18px; }
+  .contact .mail { font-family: var(--font-display); font-size: clamp(26px, 3.4vw, 42px); text-decoration: none; background: linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 1px no-repeat; transition: background-size .4s; }
+  .contact .mail:hover { background-size: 0 1px; background-position: 100% 100%; }
+  .contact .line { color: var(--muted); margin: 14px 0 30px; }
+  .pills { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0 0 56px; }
+  .pills a { display: inline-block; text-decoration: none; padding: 9px 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; background: rgba(255, 255, 255, .6); transition: .25s; }
+  .pills a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  form { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: left; }
+  form .full { grid-column: 1 / -1; }
+  input, textarea { font: inherit; color: inherit; width: 100%; padding: 14px 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, .75); }
+  input:focus, textarea:focus { outline: none; border-color: var(--ink); }
+  textarea { min-height: 130px; resize: vertical; }
+  .send { grid-column: 1 / -1; justify-self: center; font: inherit; padding: 14px 34px; border-radius: 999px; border: 0; background: var(--ink); color: var(--paper); cursor: pointer; transition: transform .25s; }
+  .send:hover { transform: translateY(-2px); }
+  .form-note { grid-column: 1 / -1; text-align: center; color: var(--muted); font-size: 13px; margin: 0; min-height: 1em; }
+  @media (max-width: 600px) { form { grid-template-columns: 1fr; } }
+
+  footer { text-align: center; padding: 30px 0 110px; font-size: 13px; color: var(--muted); }
+  footer .mark { justify-content: center; color: var(--ink); margin-bottom: 8px; }
+</style>
+</head>
+<body data-variant="2">
+<!-- ink filter: roughens edges so vector shapes look brushed -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7"/>
+    <feGaussianBlur stdDeviation=".35"/>
+  </filter>
+</svg>
+<div id="app"></div>
+<script src="assets/content.js"></script>
+<script src="assets/crows.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  var S = SITE, e = UI.esc;
+  var first = S.name.split(' ')[0], last = S.name.split(' ')[1];
+  var feather = function (cls) { return CROW.feather({ cls: cls || '' }); };
+  var brush = function (v) {
+    // hand-drawn looking stroke; dashoffset reveals it up to v%
+    return '<svg viewBox="0 0 400 18" preserveAspectRatio="none" class="ink"><path d="M4 10 C80 6 160 13 240 9 S360 7 396 10" fill="none" stroke="#151515" stroke-width="7" stroke-linecap="round" pathLength="1000" style="--off:' + (1000 - v * 10) + '"/></svg>';
+  };
+  // featured projects first and larger
+  var ordered = S.projects.slice().sort(function (a, b) { return (S.featured.indexOf(b.id) > -1) - (S.featured.indexOf(a.id) > -1); });
+
+  var html = '' +
+  '<header class="nav"><div class="wrap">' +
+    '<a class="mark" href="#top">烏 <small>' + e(S.name) + '</small></a>' +
+    '<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Journey</a></li><li><a href="#contact">Contact</a></li></ul>' +
+  '</div></header>' +
+
+  '<section class="hero" id="top" data-sec>' +
+    '<div class="kanji" aria-hidden="true">烏</div>' +
+    '<div class="wrap" style="position:relative">' +
+      '<div class="enso"><img class="mono" src="' + e(S.portrait) + '" alt="Omar Amen">' +
+        '<svg viewBox="0 0 200 200" class="ink"><circle cx="100" cy="100" r="88" fill="none" stroke="#151515" stroke-width="9" stroke-linecap="round" pathLength="1000" transform="rotate(-70 100 100)"/></svg></div>' +
+      '<h1>' + e(first) + ' <em>' + e(last) + '</em></h1>' +
+      '<p class="role">' + e(S.role) + '</p>' +
+      '<p class="sub">' + e(S.tagline) + '</p>' +
+    '</div>' +
+    '<span class="scroll-cue" aria-hidden="true"></span>' +
+  '</section>' +
+
+  '<section id="about" data-sec><div class="wrap about">' +
+    '<div class="about-side rv"><p class="eyebrow">About</p><h2 class="h2">A crow’s <em>curiosity</em>,<br>an engineer’s mind.</h2>' +
+      '<div class="about-crow ink">' + CROW.perchedSolid({ fill: '#151515', flat: true }) + '</div></div>' +
+    '<div class="rv"><p class="big">' + e(S.profile) + '</p>' +
+      '<div class="about-stats">' + S.stats.map(function (s) { return '<div><b>' + e(s.value) + '</b><span>' + e(s.label) + '</span></div>'; }).join('') + '</div></div>' +
+  '</div></section>' +
+
+  '<section id="skills" data-sec><div class="wrap">' +
+    '<p class="eyebrow rv">Skills</p><h2 class="h2 rv">Tools of the <em>craft</em></h2>' +
+    '<div class="skill-grid">' + S.skillGroups.map(function (g) {
+      return '<div class="card rv"><h3>' + feather('ink') + e(g.name) + '</h3><ul class="tags">' + g.items.map(function (x) { return '<li>' + e(x) + '</li>'; }).join('') + '</ul></div>';
+    }).join('') + '</div>' +
+    '<div class="brush-levels rv">' + S.levels.map(function (l) {
+      return '<div class="bl"><span>' + e(l.name) + '<b>' + l.value + '%</b></span>' + brush(l.value) + '</div>';
+    }).join('') + '</div>' +
+  '</div></section>' +
+
+  '<section id="work" data-sec><div class="wrap">' +
+    '<p class="eyebrow rv">Selected work</p><h2 class="h2 rv">Things I’ve <em>built</em></h2>' +
+    '<div class="works">' + ordered.map(function (p, i) {
+      var big = i < 2;
+      return '<a href="#" class="work mono-host rv' + (big ? ' big' : '') + '" data-project="' + e(p.id) + '">' +
+        '<div class="img"><img class="mono" src="' + e(p.images[0]) + '" alt="" loading="lazy"></div>' +
+        '<h3>' + e(p.name) + '</h3><p>' + e(p.short) + '</p><div class="meta">' + e(p.tools.slice(0, 3).join(' · ')) + '</div></a>';
+    }).join('') + '</div>' +
+  '</div></section>' +
+
+  '<section id="experience" data-sec><div class="wrap">' +
+    '<p class="eyebrow rv">Experience</p><h2 class="h2 rv">The <em>journey</em> so far</h2>' +
+    '<div class="timeline">' + S.experience.map(function (x) {
+      return '<div class="tl-item rv"><div class="tl-when">' + e(x.when) + '</div>' +
+        '<svg class="tl-dot ink" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="#151515"/></svg>' +
+        '<div><h3>' + e(x.role) + '</h3><p class="tl-org">' + e(x.org) + '</p><p class="tl-where">' + e(x.where) + '</p>' +
+        '<ul>' + x.points.map(function (p) { return '<li>' + e(p) + '</li>'; }).join('') + '</ul></div></div>';
+    }).join('') + '</div>' +
+  '</div></section>' +
+
+  '<section id="education" data-sec><div class="wrap">' +
+    '<p class="eyebrow rv">Education &amp; training</p><h2 class="h2 rv">Where I <em>learned</em></h2>' +
+    '<div class="edu">' + S.education.map(function (x) {
+      return '<div class="card rv"><span class="when">' + e(x.when) + '</span><h3>' + e(x.title) + '</h3><p>' + e(x.org) + '</p>' +
+        (x.note ? '<div class="award">' + feather('ink') + e(x.note) + '</div>' : '') + '</div>';
+    }).join('') + '</div>' +
+  '</div></section>' +
+
+  '<section id="contact" data-sec><div class="wrap contact">' +
+    '<div class="perched ink rv">' + CROW.perchedSolid({ fill: '#151515', flat: true }) + '</div>' +
+    '<p class="eyebrow rv" style="justify-content:center">Contact</p><h2 class="h2 rv">Say <em>hello</em></h2>' +
+    '<a class="mail rv" href="mailto:' + e(S.email) + '">' + e(S.email) + '</a>' +
+    '<p class="line rv">' + e(S.phone) + ' · ' + e(S.location) + ' · <a href="' + e(S.resume) + '">Download résumé</a></p>' +
+    '<ul class="pills rv">' + S.social.map(function (s) { return '<li><a href="' + e(s.url) + '" target="_blank" rel="noopener">' + e(s.name) + '</a></li>'; }).join('') + '</ul>' +
+    '<form class="rv" data-demo><input placeholder="Your name" required><input type="email" placeholder="Your email" required>' +
+      '<input class="full" placeholder="Subject" required><textarea class="full" placeholder="Message" required></textarea>' +
+      '<button class="send" type="submit">Send message</button><p class="form-note"></p></form>' +
+  '</div></section>' +
+
+  '<footer><a class="mark" href="#top">烏</a>© ' + new Date().getFullYear() + ' ' + e(S.name) + ' · ' + e(S.site) + '</footer>';
+
+  document.getElementById('app').innerHTML = html;
+
+  // drifting feathers in the hero
+  var hero = document.querySelector('.hero');
+  for (var i = 0; i < 7; i++) {
+    var f = document.createElement('div');
+    f.className = 'feather ink';
+    f.innerHTML = CROW.feather();
+    f.style.left = (8 + i * 13 + Math.random() * 6) + '%';
+    f.style.animationDuration = (14 + Math.random() * 12) + 's';
+    f.style.animationDelay = (-Math.random() * 20) + 's';
+    f.style.width = (14 + Math.random() * 16) + 'px';
+    hero.appendChild(f);
+  }
+
+  // a crow that glides across the page as you scroll
+  var glider = document.createElement('div');
+  glider.className = 'glider ink';
+  glider.innerHTML = CROW.flying({ fill: '#151515' });
+  document.body.appendChild(glider);
+  var nav = document.querySelector('.nav');
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - innerHeight;
+    var p = max > 0 ? scrollY / max : 0;
+    var x = -180 + p * (innerWidth + 360) * 3 % (innerWidth + 360);       // crosses the screen three times
+    var y = innerHeight * (.2 + .12 * Math.sin(p * Math.PI * 6));
+    var tilt = 8 * Math.cos(p * Math.PI * 6);
+    glider.style.transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + tilt + 'deg)';
+    nav.classList.toggle('solid', scrollY > 40);
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
+
+  UI.init();
+})();
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.omaramen.com/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -49,6 +49,16 @@
   <url>
     <loc>https://www.omaramen.com/portfolio/df2c63e6-f5eb-4239-9f17-90762329eb1a</loc>
     <lastmod>2026-09-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/3671fea7-a21b-459b-9de3-b0ad4be57336</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/eff4a652-c3f1-4a59-8dc2-8da7ce4b1896</loc>
+    <lastmod>2026-09-29</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>

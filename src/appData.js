@@ -37,10 +37,48 @@ import fmWebApp2 from './media/fmWebApp2.jpg';
 import fmWebApp3 from './media/fmWebApp3.jpg';
 import fmWebAppCover from './media/fmWebAppCover.jpg';
 
-export const Data = 
+import spacefit1 from './media/spacefit1.jpg';
+import spacefit2 from './media/spacefit2.jpg';
+import spacefit3 from './media/spacefit3.jpg';
+import spacefit4 from './media/spacefit4.jpg';
+import spacefitCover from './media/spacefitCover.jpg';
+
+import arenPro1 from './media/arenPro1.jpg';
+import arenPro2 from './media/arenPro2.jpg';
+import arenPro3 from './media/arenPro3.jpg';
+import arenPro4 from './media/arenPro4.jpg';
+import arenProCover from './media/arenProCover.jpg';
+
+export const Data =
 {
     TopProjects:["491cbe47-f2cc-42f2-9189-9f1704524e3o","491cbe47-f2cc-42f2-9189-9f1704524e3b","e90dd55c-321c-48ba-937f-66b8993dff8f"],
     Projects:[
+        {
+            id:"3671fea7-a21b-459b-9de3-b0ad4be57336",
+            Name:"SPACEFIT.ai Plan Detection",
+            MinDiscription:"Autodesk viewer extension that detects walls, rooms and spaces in PDF/DWG floor plans for AI space planning.",
+            Discription:"Built from scratch for SPACEFIT.ai and integrated into their existing web application. Users upload a PDF or DWG floor plan, which is translated with the Model Derivative API and shown in the Autodesk viewer. A custom viewer extension then detects the building elements (outer walls, inner walls, windows, columns, rooms, voids and outer spaces) and draws them as polygons. Users review the result step by step, edit the detected polygons and add missing rooms or voids. The final shapes are passed to SPACEFIT's AI algorithms, which use them to plan and optimise how the spaces are used.",
+            Images:[spacefitCover,spacefit1,spacefit2,spacefit3,spacefit4],
+            Tools:["Autodesk Forge / APS","Forge Viewer extensions","Model Derivative API","Angular","JavaScript"],
+            Features:["PDF and DWG floor plans in the Autodesk viewer.","Automatic detection of outer and inner walls, windows and columns.","Detection of rooms, voids and outer spaces as editable polygons.","Step-by-step review: perimeter & voids, core areas, walls, posts, doors, facade windows, mullions, corridors and rooms.","Edit detected shapes and add new rooms or voids.","Exports the final geometry to SPACEFIT's AI space-planning engine."],
+            YoutubeVidId:"AWnv6fwimA4",
+            DownloadLink:"",
+            SimilarProjectsIds:["eff4a652-c3f1-4a59-8dc2-8da7ce4b1896","491cbe47-f2cc-42f2-9189-9f1704524e3o","e90dd55c-321c-48ba-937f-66b8993dff8f"],
+            IsActive:true
+        },
+        {
+            id:"eff4a652-c3f1-4a59-8dc2-8da7ce4b1896",
+            Name:"ArenPro Massing & Solar Study",
+            MinDiscription:"Web tool to draw a building mass on a map location and simulate the sun path for that site.",
+            Discription:"A feature built for ArenPro, a web-based building energy platform. The user picks a site on an interactive map, then draws a generic building mass on it, with multiple floors that can each have a different shape, surrounded by the real neighbouring buildings in 3D. Based on the selected location on the globe, the tool runs a complete solar simulation: the sun's position and path for any date and time of day, shown around the building.",
+            Images:[arenProCover,arenPro1,arenPro2,arenPro3,arenPro4],
+            Tools:["Mapbox","Three.js","React","JavaScript"],
+            Features:["Pick the project site on an interactive map.","Draw a generic building mass on the selected location.","Multiple floors, each with its own shape.","3D context of the surrounding buildings.","Solar simulation based on the site's location on the globe.","Sun position and path for any date and time of day."],
+            YoutubeVidId:"BWZrfqhgrIA",
+            DownloadLink:"",
+            SimilarProjectsIds:["3671fea7-a21b-459b-9de3-b0ad4be57336","bc9184b1-8d96-462f-87d4-f14d708ce5b5","491cbe47-f2cc-42f2-9189-9f1704524e3o"],
+            IsActive:true
+        },
         {
             id:"491cbe47-f2cc-42f2-9189-9f1704524e3o",
             Name:"FM Web Application",

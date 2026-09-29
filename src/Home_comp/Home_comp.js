@@ -47,7 +47,7 @@ export default class Home_comp extends React.Component {
     // each project URL gets its own search title/description; section URLs all point to the home page
     if (project) {
       setPageMeta({
-        title: project.Name + ' · Revit & BIM project by ' + Profile.name,
+        title: project.Name + ' · BIM project by ' + Profile.name,
         description: snippet(project.Discription || project.MinDiscription),
         path: '/portfolio/' + project.id
       });

@@ -20,5 +20,12 @@
 .spec-more b { font-family: var(--font-display); font-weight: 400; font-style: italic; font-size: 26px; color: var(--ink); }
 .spec-more:hover b { text-decoration: underline; text-underline-offset: 4px; }
 
-@media (max-width: 1000px) { .specs { grid-template-columns: 1fr 1fr; } .spec-more { display: flex; } }
-@media (max-width: 620px) { .specs { grid-template-columns: 1fr; } .spec-more { display: none; } }
+/* show the filler only in the layout where the grid has a gap (classes set in SheetWork_comp) */
+.spec-more.gap3-1, .spec-more.gap3-2 { display: flex; }
+.spec-more.gap3-2 { grid-column: span 2; }
+@media (max-width: 1000px) {
+  .specs { grid-template-columns: 1fr 1fr; }
+  .spec-more.gap3-1, .spec-more.gap3-2 { display: none; grid-column: auto; }
+  .spec-more.gap2 { display: flex; }
+}
+@media (max-width: 620px) { .specs { grid-template-columns: 1fr; } .spec-more.gap2 { display: none; } }

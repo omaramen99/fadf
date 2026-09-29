@@ -22,6 +22,12 @@ export default class SheetWork_comp extends React.Component {
     this.props.onOpen(id);
   };
 
+  // e.g. 11 sheets: 3 columns leave 1 empty slot -> ' gap3-1'; 2 columns leave 1 -> ' gap2'
+  gapClasses(n) {
+    const gap3 = (3 - n % 3) % 3;
+    return (gap3 ? ' gap3-' + gap3 : '') + (n % 2 ? ' gap2' : '');
+  }
+
   render() {
     const { projects, featured } = this.props;
     return (
@@ -41,9 +47,10 @@ export default class SheetWork_comp extends React.Component {
                   <div className="spec-f"><span>{p.Images.length} figs · {p.Features.length} features</span><span>open_sheet →</span></div>
                 </a>
               ))}
-              {/* only visible in the 2-column layout, where an odd number of sheets leaves an empty slot */}
-              {projects.length % 2 === 1 && (
-                <Link className="spec-more" to="/contact">
+              {/* Fills the empty slot(s) at the end of the grid. The column count comes from CSS media
+                  queries, so we compute the gap for each layout here and let CSS pick the matching class. */}
+              {this.gapClasses(projects.length) && (
+                <Link className={'spec-more' + this.gapClasses(projects.length)} to="/contact">
                   <Art svg={crowWire('#111')} />
                   <b>More on request</b>
                   <span>contact() →</span>

@@ -49,6 +49,56 @@ import arenPro3 from './media/arenPro3.jpg';
 import arenPro4 from './media/arenPro4.jpg';
 import arenProCover from './media/arenProCover.jpg';
 
+import ductBank1 from './media/ductBank1.jpg';
+import ductBank2 from './media/ductBank2.jpg';
+import ductBank3 from './media/ductBank3.jpg';
+import ductBank4 from './media/ductBank4.jpg';
+import ductBankCover from './media/ductBankCover.jpg';
+
+import alliedHangers1 from './media/alliedHangers1.jpg';
+import alliedHangers2 from './media/alliedHangers2.jpg';
+import alliedHangers3 from './media/alliedHangers3.jpg';
+import alliedHangers4 from './media/alliedHangers4.jpg';
+import alliedHangers5 from './media/alliedHangers5.jpg';
+import alliedHangersCover from './media/alliedHangersCover.jpg';
+
+import spoolSheets1 from './media/spoolSheets1.jpg';
+import spoolSheets2 from './media/spoolSheets2.jpg';
+import spoolSheets3 from './media/spoolSheets3.jpg';
+import spoolSheets4 from './media/spoolSheets4.jpg';
+import spoolSheetsCover from './media/spoolSheetsCover.jpg';
+
+import marketplace1 from './media/marketplace1.jpg';
+import marketplace2 from './media/marketplace2.jpg';
+import marketplace3 from './media/marketplace3.jpg';
+import marketplaceCover from './media/marketplaceCover.jpg';
+
+import assemblySim1 from './media/assemblySim1.jpg';
+import assemblySim2 from './media/assemblySim2.jpg';
+import assemblySim3 from './media/assemblySim3.jpg';
+import assemblySimCover from './media/assemblySimCover.jpg';
+
+import splitConduits1 from './media/splitConduits1.jpg';
+import splitConduits2 from './media/splitConduits2.jpg';
+import splitConduits3 from './media/splitConduits3.jpg';
+import splitConduitsCover from './media/splitConduitsCover.jpg';
+
+import conduitEdit1 from './media/conduitEdit1.jpg';
+import conduitEdit2 from './media/conduitEdit2.jpg';
+import conduitEdit3 from './media/conduitEdit3.jpg';
+import conduitEdit4 from './media/conduitEdit4.jpg';
+import conduitEditCover from './media/conduitEditCover.jpg';
+
+import mepExpand1 from './media/mepExpand1.jpg';
+import mepExpand2 from './media/mepExpand2.jpg';
+import mepExpand3 from './media/mepExpand3.jpg';
+import mepExpandCover from './media/mepExpandCover.jpg';
+
+import systemHangers1 from './media/systemHangers1.jpg';
+import systemHangers2 from './media/systemHangers2.jpg';
+import systemHangers3 from './media/systemHangers3.jpg';
+import systemHangersCover from './media/systemHangersCover.jpg';
+
 export const Data =
 {
     TopProjects:["491cbe47-f2cc-42f2-9189-9f1704524e3o","491cbe47-f2cc-42f2-9189-9f1704524e3b","e90dd55c-321c-48ba-937f-66b8993dff8f"],
@@ -77,6 +127,123 @@ export const Data =
             YoutubeVidId:"BWZrfqhgrIA",
             DownloadLink:"",
             SimilarProjectsIds:["3671fea7-a21b-459b-9de3-b0ad4be57336","bc9184b1-8d96-462f-87d4-f14d708ce5b5","491cbe47-f2cc-42f2-9189-9f1704524e3o"],
+            IsActive:true
+        },
+        {
+            id:"cb83b5a7-f599-452a-9053-6ea6de5672a9",
+            Name:"Duct Bank Spacers",
+            MinDiscription:"Model underground duct bank spacers in Revit and send them straight to the CNC.",
+            Discription:"Pick a duct bank and the tool groups its parallel conduits, sizes the spacer plates and places them along the run, each one cut with conduit holes, concrete flow-through holes, rebar holes and key slots. One more click exports the plate profiles to DXF/DWG and nests them on the raw sheet to cut waste on laser or water-jet machines.",
+            Images:[ductBankCover,ductBank1,ductBank2,ductBank3,ductBank4],
+            Tools:["C#", "Revit API", "WPF", "netDxf", "DeepNest nesting"],
+            Features:["Groups the conduits of a bank automatically.", "Plates sized and placed along the run.", "Reusable plate settings: paddings, tolerances, hole sizes.", "DXF/DWG export with sheet nesting for CNC cutting."],
+            YoutubeVidId:"0m3TrzOo8tk",
+            DownloadLink:"",
+            SimilarProjectsIds:["1e97d7f0-95ce-4544-b407-577aa3f98c94", "421ed31a-1309-437b-982d-37491a583f97", "8f6aa2ae-9951-4cbd-bc8d-f7dc12b4a2d5"],
+            IsActive:true
+        },
+        {
+            id:"1e97d7f0-95ce-4544-b407-577aa3f98c94",
+            Name:"Allied Multi-Tier Hangers",
+            MinDiscription:"Size and place multi-tier trapeze hangers along whole conduit banks in one go.",
+            Discription:"No more placing and sizing hangers one by one. I built the parametric multi-tier hanger family myself, then a tool that follows each conduit run, groups the parallel conduits into banks, sizes the strut to the bank, switches on up to four tiers at the right elevations and extends every rod to the structure above.",
+            Images:[alliedHangersCover,alliedHangers1,alliedHangers2,alliedHangers3,alliedHangers4,alliedHangers5],
+            Tools:["C#", "Revit API", "WPF", "Revit Family Editor"],
+            Features:["Custom parametric hanger family with switchable tiers.", "Follows full runs and groups conduits into banks.", "Strut sized per bank, up to four tiers.", "Single-conduit clamps and rods extended to structure."],
+            YoutubeVidId:"SHLnR7hFB2E",
+            DownloadLink:"",
+            SimilarProjectsIds:["8f6aa2ae-9951-4cbd-bc8d-f7dc12b4a2d5", "cb83b5a7-f599-452a-9053-6ea6de5672a9", "421ed31a-1309-437b-982d-37491a583f97"],
+            IsActive:true
+        },
+        {
+            id:"4db1b8a3-3968-4afc-a433-041bb012df18",
+            Name:"Assemblies & Shop Drawings",
+            MinDiscription:"One-click spooling: turn the fabrication model into complete shop-drawing sheets.",
+            Discription:"Create named assemblies, save a spool setting once (sheets, views, schedules, dimensions, tags), then spool any number of them into finished shop drawings in one click. The Fabrication Manager pane organises it all and exports cut lists to RazorGage and TigerStop saws.",
+            Images:[spoolSheetsCover,spoolSheets1,spoolSheets2,spoolSheets3,spoolSheets4],
+            Tools:["C#", "Revit API", "WPF", "MVVM"],
+            Features:["Assemblies with prefix / number / suffix naming.", "Reusable spool settings for sheets, views and tags.", "Batch spooling into complete shop-drawing sheets.", "Fabrication Manager with saw cut-list export and web sync."],
+            YoutubeVidId:"PFxNcmY0-U0",
+            DownloadLink:"",
+            SimilarProjectsIds:["7adc7f11-a1ef-46c4-a2a6-dc5fdca69f7b", "a1fce3ba-f2da-4434-be89-c30b54c4bb4b", "421ed31a-1309-437b-982d-37491a583f97"],
+            IsActive:true
+        },
+        {
+            id:"a1fce3ba-f2da-4434-be89-c30b54c4bb4b",
+            Name:"Family Marketplace",
+            MinDiscription:"Share Revit families between Revit and the web as GLB, and bring them back as native families.",
+            Discription:"A Revit pane to browse and search a shared catalog. Publish a family straight from the model with a 360° spin thumbnail and its geometry and parameters as GLB. Importing rebuilds a native Revit family with its original category and a version stamp, so outdated families update in place.",
+            Images:[marketplaceCover,marketplace1,marketplace2,marketplace3],
+            Tools:["C#", "Revit API", "WPF", "glTF / GLB", "WebView2", "Azure Blob Storage"],
+            Features:["Browse and search families from a Revit pane.", "Publish with 360° thumbnail and GLB export.", "Import as native families that update in place.", "Edit on the web and place assembly templates."],
+            YoutubeVidId:"k5ucBpsHsgw",
+            DownloadLink:"",
+            SimilarProjectsIds:["4db1b8a3-3968-4afc-a433-041bb012df18", "7adc7f11-a1ef-46c4-a2a6-dc5fdca69f7b", "cb83b5a7-f599-452a-9053-6ea6de5672a9"],
+            IsActive:true
+        },
+        {
+            id:"7adc7f11-a1ef-46c4-a2a6-dc5fdca69f7b",
+            Name:"Assembly Simulation",
+            MinDiscription:"Watch a fabrication assembly build itself, piece by piece, in the browser.",
+            Discription:"A simulation mode for the Fabrication Connected web app that shows the shop how an assembly goes together. It opens with every part taken apart and laid out on an assembly table, then flies each part to its final position in assembly order until the assembly is complete.",
+            Images:[assemblySimCover,assemblySim1,assemblySim2,assemblySim3],
+            Tools:["Autodesk Platform Services", "Forge Viewer", "Three.js", "JavaScript"],
+            Features:["Parts laid out on a virtual assembly table.", "Step-by-step build in assembly order.", "Play, pause and step controls.", "Runs inside the Fabrication Connected web app."],
+            YoutubeVidId:"FbvHH4lUIdg",
+            DownloadLink:"",
+            SimilarProjectsIds:["4db1b8a3-3968-4afc-a433-041bb012df18", "a1fce3ba-f2da-4434-be89-c30b54c4bb4b", "3671fea7-a21b-459b-9de3-b0ad4be57336"],
+            IsActive:true
+        },
+        {
+            id:"421ed31a-1309-437b-982d-37491a583f97",
+            Name:"Split Conduits",
+            MinDiscription:"Split long conduit runs into real stick lengths, the way they are installed on site.",
+            Discription:"Walks the whole conduit network, straights and bends, and calculates cut points from your minimum and maximum stick lengths. Cuts stay clear of the bends, a coupling is inserted at each one, and couplings on parallel runs line up with each other.",
+            Images:[splitConduitsCover,splitConduits1,splitConduits2,splitConduits3],
+            Tools:["C#", "Revit API", "WPF", "MVVM", "Analysis Visualization Framework"],
+            Features:["Cut points from min / max stick length.", "Cuts kept clear of bends, coupling at each cut.", "Couplings aligned across a parallel bank.", "Runs still too long are highlighted before proceeding."],
+            YoutubeVidId:"lOy_KAc5GOg",
+            DownloadLink:"",
+            SimilarProjectsIds:["50a6da6b-95f0-48ef-a043-2764f828058e", "26ab1f64-e1cf-473d-a664-c181566b1f5a", "cb83b5a7-f599-452a-9053-6ea6de5672a9"],
+            IsActive:true
+        },
+        {
+            id:"50a6da6b-95f0-48ef-a043-2764f828058e",
+            Name:"Conduit Editing Tools",
+            MinDiscription:"Split, slice, rejoin and measure conduits that are already split, in seconds.",
+            Discription:"Quick tools that sit alongside the splitter. Cut a whole parallel bank at a coupling or at any point, join two conduits back into one, get the true length of a selection in feet and fractional inches, or set a target length and let the fitting move to match it.",
+            Images:[conduitEditCover,conduitEdit1,conduitEdit2,conduitEdit3,conduitEdit4],
+            Tools:["C#", "Revit API", "WPF"],
+            Features:["Split By Coupling and Slice Conduits across a bank.", "Unsplit two conduits back into one.", "Get Length in feet and fractional inches.", "Adjust Length by moving the connected fitting."],
+            YoutubeVidId:"1G8Yj4n1eqk",
+            DownloadLink:"",
+            SimilarProjectsIds:["421ed31a-1309-437b-982d-37491a583f97", "26ab1f64-e1cf-473d-a664-c181566b1f5a", "1e97d7f0-95ce-4544-b407-577aa3f98c94"],
+            IsActive:true
+        },
+        {
+            id:"26ab1f64-e1cf-473d-a664-c181566b1f5a",
+            Name:"MEPExpand",
+            MinDiscription:"Model conduit kicks, stubs, offsets and saddles the way electricians bend them.",
+            Discription:"A modeless window with Kick 90, Stub 90, Offset, 3-point and 4-point Saddle. Pick a conduit, choose an angle, direction and distance, and the tool cuts the run and builds the bend. Refresh the last result live with new values, or apply the same bend to a whole group of conduits at once.",
+            Images:[mepExpandCover,mepExpand1,mepExpand2,mepExpand3],
+            Tools:["C#", "Revit API", "WPF", "MVVM", "External Events"],
+            Features:["Kick 90, Stub 90, Offset and 3 / 4-point Saddles.", "Standard or custom angles with presets.", "Live refresh and undo of the last bend.", "Same bend applied to many conduits at once."],
+            YoutubeVidId:"wzHcUQvsF40",
+            DownloadLink:"",
+            SimilarProjectsIds:["50a6da6b-95f0-48ef-a043-2764f828058e", "421ed31a-1309-437b-982d-37491a583f97", "1e97d7f0-95ce-4544-b407-577aa3f98c94"],
+            IsActive:true
+        },
+        {
+            id:"8f6aa2ae-9951-4cbd-bc8d-f7dc12b4a2d5",
+            Name:"System Hangers",
+            MinDiscription:"Place any hanger family along MEP runs: map it once, reuse it everywhere.",
+            Discription:"A hanger tool that isn't tied to one product. Load any hanger family, map its width and rod parameters, set its offset and rotation with a live preview, and save it as a project setting. Hangers are then placed by spacing or count, grouped under parallel runs and extended to structure.",
+            Images:[systemHangersCover,systemHangers1,systemHangers2,systemHangers3],
+            Tools:["C#", "Revit API", "WPF", "MVVM"],
+            Features:["Works with any custom hanger family.", "Placement by spacing or hangers per element.", "Groups parallel runs and respects insulation.", "Rods extended to the nearest structure."],
+            YoutubeVidId:"YhGwSxjzrk8",
+            DownloadLink:"",
+            SimilarProjectsIds:["1e97d7f0-95ce-4544-b407-577aa3f98c94", "cb83b5a7-f599-452a-9053-6ea6de5672a9", "421ed31a-1309-437b-982d-37491a583f97"],
             IsActive:true
         },
         {

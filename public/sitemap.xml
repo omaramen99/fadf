@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.omaramen.com/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -59,6 +59,51 @@
   <url>
     <loc>https://www.omaramen.com/portfolio/eff4a652-c3f1-4a59-8dc2-8da7ce4b1896</loc>
     <lastmod>2026-09-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/cb83b5a7-f599-452a-9053-6ea6de5672a9</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/1e97d7f0-95ce-4544-b407-577aa3f98c94</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/4db1b8a3-3968-4afc-a433-041bb012df18</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/a1fce3ba-f2da-4434-be89-c30b54c4bb4b</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/7adc7f11-a1ef-46c4-a2a6-dc5fdca69f7b</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/421ed31a-1309-437b-982d-37491a583f97</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/50a6da6b-95f0-48ef-a043-2764f828058e</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/26ab1f64-e1cf-473d-a664-c181566b1f5a</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.omaramen.com/portfolio/8f6aa2ae-9951-4cbd-bc8d-f7dc12b4a2d5</loc>
+    <lastmod>2026-10-01</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>

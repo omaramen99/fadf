@@ -1,4 +1,4 @@
-.nav { position: sticky; top: 0; z-index: 50; background: rgba(247, 240, 222, .97); border-bottom: var(--b); }
+.nav { position: sticky; top: 0; z-index: 50; background: rgba(251, 250, 246, .97); border-bottom: var(--b); }
 .nav .wrap { display: flex; align-items: center; height: 60px; gap: 20px; }
 .nav .mark { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .nav .mark .logo { display: block; width: 46px; }

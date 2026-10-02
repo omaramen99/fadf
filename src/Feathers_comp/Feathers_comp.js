@@ -4,6 +4,10 @@ import { Art, feather, crowFlying } from '../crows';
 
 // Decorative layer: feathers drifting down over the whole page, and a crow that glides
 // across the screen as you scroll. Both sit in fixed layers and ignore the mouse.
+// The gliding crow is switched off for now: its scroll handler and ink filter were heavy on
+// old laptops and phones. Set to true to bring it back.
+const SHOW_GLIDER = false;
+
 export default class Feathers_comp extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +23,7 @@ export default class Feathers_comp extends React.Component {
   }
 
   componentDidMount() {
+    if (!SHOW_GLIDER) return;
     window.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onScroll);
     this.onScroll();
@@ -48,9 +53,11 @@ export default class Feathers_comp extends React.Component {
         <div className="feathers" aria-hidden="true">
           {this.feathers.map((style, i) => <Art key={i} className="feather ink" style={style} svg={feather()} />)}
         </div>
-        <div className="glider ink" ref={this.glider} aria-hidden="true">
-          <Art svg={crowFlying()} />
-        </div>
+        {SHOW_GLIDER && (
+          <div className="glider ink" ref={this.glider} aria-hidden="true">
+            <Art svg={crowFlying()} />
+          </div>
+        )}
       </>
     );
   }

@@ -38,7 +38,7 @@ Create React App project (`react-scripts` 4, React 17, plain JS). There is no ba
 - `/about`, `/skill`, `/projects`, `/journey`, `/learning`, `/contact`: scroll to that section (map in `SECTION_BY_PATH` in `Home_comp`). The nav links use these paths.
 - `/portfolio/:id`: opens that project's overlay (`ProjectSheet_comp`). Closing it replaces the URL, so Back doesn't reopen it.
 
-Anything else renders `Error404_comp`. `Header_comp` and `Footer_comp` wrap every route; `Feathers_comp` (drifting feathers + gliding crow) sits on top in a fixed layer.
+Anything else renders `Error404_comp`. `Header_comp` and `Footer_comp` wrap every route; `Feathers_comp` (drifting feathers) sits on top in a fixed layer; its gliding crow is disabled with `SHOW_GLIDER = false` for performance.
 
 **Components** (`src/<Name>_comp/`, class components, one CSS file each):
 - Page sections, in order: `SheetHero_comp`, `SheetAbout_comp`, `SheetSkills_comp`, `SheetWork_comp`, `SheetJourney_comp`, `SheetLearning_comp`, `SheetContact_comp`.

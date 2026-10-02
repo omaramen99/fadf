@@ -1,10 +1,10 @@
 /* Design tokens and base styles for the "Crow Sheet" design: ink on drafting paper. */
 :root {
   --ink: #151515;
-  --paper: #fbfaf6;
-  --muted: #77746c;
-  --line: #dedad0;
-  --wash: #f1efe8;
+  --paper: #f7f0de;   /* light old-paper yellow */
+  --muted: #766f62;
+  --line: #ddd2b9;
+  --wash: #efe6cf;
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Manrope', system-ui, sans-serif;
   --font-sheet: 'Space Grotesk', 'Manrope', system-ui, sans-serif;
@@ -30,8 +30,8 @@ body {
   /* paper grain + drafting grid (major 120px, minor 24px) */
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
-    linear-gradient(rgba(21, 21, 21, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(21, 21, 21, .07) 1px, transparent 1px),
-    linear-gradient(rgba(21, 21, 21, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(21, 21, 21, .035) 1px, transparent 1px);
+    linear-gradient(rgba(92, 70, 30, .09) 1px, transparent 1px), linear-gradient(90deg, rgba(92, 70, 30, .09) 1px, transparent 1px),
+    linear-gradient(rgba(92, 70, 30, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(92, 70, 30, .045) 1px, transparent 1px);
   background-size: 220px 220px, 120px 120px, 120px 120px, 24px 24px, 24px 24px;
 }
 
@@ -49,7 +49,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--pad); }
 .ink { filter: url(#ink); }
 .note { font-family: var(--mono); font-size: 11.5px; letter-spacing: .02em; color: var(--muted); }
-.sheet { border: var(--b); border-radius: var(--radius); background: rgba(251, 250, 246, .93); overflow: hidden; }
+.sheet { border: var(--b); border-radius: var(--radius); background: rgba(250, 245, 231, .94); overflow: hidden; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* grayscale photos that come alive on hover */

@@ -12,7 +12,8 @@ export default class Feathers_comp extends React.Component {
   constructor(props) {
     super(props);
     // random positions are picked once, so re-renders don't make the feathers jump
-    const count = window.innerWidth < 700 ? 7 : 11;
+    // kept low on purpose: every feather is an animated layer the browser repaints while scrolling
+    const count = window.innerWidth < 700 ? 3 : 6;
     this.feathers = Array.from({ length: count }, (_, i) => ({
       left: (i * (100 / count) + Math.random() * (60 / count)) + '%',
       width: (13 + Math.random() * 13) + 'px',
@@ -51,7 +52,7 @@ export default class Feathers_comp extends React.Component {
     return (
       <>
         <div className="feathers" aria-hidden="true">
-          {this.feathers.map((style, i) => <Art key={i} className="feather ink" style={style} svg={feather()} />)}
+          {this.feathers.map((style, i) => <Art key={i} className="feather" style={style} svg={feather()} />)}
         </div>
         {SHOW_GLIDER && (
           <div className="glider ink" ref={this.glider} aria-hidden="true">

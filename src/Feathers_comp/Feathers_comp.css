@@ -1,5 +1,6 @@
 .feathers { position: fixed; inset: 0; z-index: 20; overflow: hidden; pointer-events: none; }
-.feather { position: absolute; top: 0; width: 22px; opacity: .15; animation: drift linear infinite; }
+/* no ink filter here: SVG filters on moving elements are expensive to repaint */
+.feather { position: absolute; top: 0; width: 22px; opacity: .15; animation: drift linear infinite; will-change: transform; }
 .feather svg { width: 100%; height: auto; display: block; }
 @keyframes drift {
   0% { transform: translate(0, -60px) rotate(-20deg); }
